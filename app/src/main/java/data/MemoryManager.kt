@@ -1,6 +1,5 @@
 package cr.ac.utn.appmovil.data
 
-import cr.ac.utn.appmovil.identities.Contact
 import cr.ac.utn.appmovil.interfaces.IDBManager
 import identities.Identifier
 
