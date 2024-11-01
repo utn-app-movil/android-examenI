@@ -1,50 +1,80 @@
 <resources>
-    <!-- App Name -->
     <string name="app_name">Test 1</string>
+    <string name="Cen_addcensus">add new person</string>
+    <string name="Cen_viewcensus">view census list</string>
+    <string name="cen_Userid">Contact ID</string>
+    <string name="cen_name">Name</string>
+    <string name="Cen_Phone">Phone</string>
+    <string name="Cen_LastName">Last Name</string>
+    <string name="Cen_Email">Email</string>
+    <string name="Cen_Address">Address</string>
+    <string name="Cen_Province">Province</string>
+    <string name="Cen_Canton">Canton</string>
+    <string name="Cen_District">District</string>
+    <string name="Cen_mn_save">save</string>
+    <string name="Cen_menu_delete">Delete</string>
+    <string name="Cen_mn_cancel">Cancel</string>
+    <string name="Cen_msg_notFound">Not Found</string>
+    <string name="Cen_msg_sure">sure</string>
+    <string name="Cen_msg_ready">Ready</string>
+    <string name="Cen_No">No</string>
+    <string name="Cen_msg_update">Update</string>
+    <string name="Cen_msg_save_user">Save user</string>
+    <string name="Cen_msg_missing_data">missing Data</string>
+    <string name="Cen_user_exist">User exist</string>
+    <string name="Cen_much_text">much text</string>
+    <string name="Cen_not_email">email not accepted</string>
+    <string name="Cen_much_number">much number</string>
+    <string name="far_farm_title_name">Pharmacy</string>
+    <string name="far_patient_txt">Patient</string>
+    <string name="far_medicine_txt">Medicine</string>
+    <string name="far_quantity_input">Quantity</string>
+    <string name="far_Add_button">Add medicine</string>
+    <string name="far_price_Input">Price</string>
+    <string name="far_medicine_Input">Medicine name</string>
+    <string name="far_name_input">Name</string>
+    <string name="far_id_input">Identity</string>
+    <string name="far_input_lastname">Lastname</string>
+    <string name="far_input_phone">Phone number</string>
+    <string name="far_email_input">Email</string>
+    <string name="far_address_input">Address</string>
+    <string name="far_country_input">Country</string>
+    <string name="far_Ins_new_Patient">Insert patient</string>
+    <string name="far_success_addMedicine">Medicine added</string>
+    <string name="far_txt_failed">Something wrong</string>
+    <string name="app_name">Containers Dorian</string>
+    <string name="nav_ContainerCont">Container Control</string>
+    <string name="nav_ListCont">List Containers</string>
+    <string name="nav_containerNum">Container number</string>
+    <string name="nav_nomPer">Person name</string>
+    <string name="day">dd/mm/yyyy</string>
+    <string name="nav_dayTxt">Day control</string>
+    <string name="nav_hour">Hour maintenance</string>
+    <string name="nav_typeCont">Container Type</string>
+    <string name="nav_tempCont">Container temperatue</string>
+    <string name="nav_weight">Contaier weight</string>
+    <string name="nav_Product">Product in the container</string>
 
-    <!-- Field Hints -->
-    <string name="bib_student_name_hint">Student Name</string>
-    <string name="bib_book_code_hint">Book Code</string>
-    <string name="bib_book_name_hint">Book Name</string>
-    <string name="bib_reservation_date_hint">Reservation Date (YYYY-MM-DD)</string>
-    <string name="bib_return_date_hint">Return Date (YYYY-MM-DD)</string>
-    <string name="bib_library_location_hint">Library Location</string>
+    //sppiner
+    <string-array name="datos">
+        <item>Seco</item>
+        <item>Humedo</item>
 
-    <!-- Buttons -->
-    <string name="bib_save">Save</string>
-    <string name="bib_cancel">Cancel</string>
-    <string name="bib_remove">Remove</string>
-    <string name="bib_add">Add</string>
-    <string name="bib_view">View</string>
-    <string name="bib_save_reservation">Save Reservation</string>
+    </string-array>
+    //Crud
 
-    <!-- Labels -->
-    <string name="bib_student_name">Student Name</string>
-    <string name="bib_book_code">Book Code</string>
-    <string name="bib_book_name">Book Name</string>
-    <string name="bib_reservation_date">Reservation Date</string>
-    <string name="bib_return_date">Return Date</string>
-    <string name="bib_library_location">Library Location</string>
+    <string name="containerNotF">Container not found</string>
+    <string name="InsertC">Insert Container</string>
+    <string name="delCont">Delete container</string>
+    <string name="updCont">Update Container</string>
+    <string name="LstConrt">List Containers</string>
+    <string name="msgSucces">Succes insert</string>
+    <string name="msgDel">Succes delete</string>
+    <string name="msgUpd">Succes update</string>
+    <string name="msgErr">Error missing data</string>
+    <string name="btn_insert_Cont">Regis container</string>
 
-    <!-- Toast Messages -->
-    <string name="reservation_saved">Reservation saved!</string>
-    <string name="reservation_updated">Reservation updated!</string>
-    <string name="reservation_deleted">Reservation deleted!</string>
-    <string name="reservation_not_found">Reservation not found!</string>
-    <string name="reservation_duplicate">Duplicate reservation!</string>
-    <string name="invalid_date_format">Invalid date format</string>
+    //succes msg
 
-    <!-- Field Error Messages -->
-    <string name="error_student_name">Student name is required</string>
-    <string name="error_book_code">Book code is required</string>
-    <string name="error_book_name">Book name is required</string>
-    <string name="error_library_location">Library location is required</string>
-    <string name="error_return_date">Return date must be after the reservation date</string>
 
-    <!-- Button and Interface Text -->
-    <string name="update_button_text">Update</string>
-
-    <string name="bib_title">Library Reservations</string>
-    <string name="bib_view_reservations">View Reservations</string>
-    <string name="bib_add_new_reservation">Add New Reservation</string>
 </resources>

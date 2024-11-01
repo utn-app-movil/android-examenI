@@ -1,44 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Examen I</string>
+    <string name="Cen_addcensus">"añadir nueva persona "</string>
+    <string name="Cen_viewcensus">mirar lista de censo</string>
+    <string name="cen_Userid">ID del usuario</string>
+    <string name="cen_name">Nombre</string>
+    <string name="Cen_Phone">Numero</string>
+    <string name="Cen_LastName">Apellido</string>
+    <string name="Cen_Email">Correo</string>
+    <string name="Cen_Address">Direccion</string>
+    <string name="Cen_Province">Provincia</string>
+    <string name="Cen_Canton">Canton</string>
+    <string name="Cen_District">Distrito</string>
+    <string name="Cen_mn_save">Guardar</string>
+    <string name="Cen_menu_delete">Borrar</string>
+    <string name="Cen_mn_cancel">Cancelar</string>
+    <string name="Cen_msg_notFound">No econtrado</string>
+    <string name="Cen_msg_sure">seguro</string>
+    <string name="Cen_msg_ready">Listo</string>
+    <string name="Cen_No">No</string>
+    <string name="Cen_msg_update">Actualizado</string>
+    <string name="Cen_msg_save_user">usuario guardado</string>
+    <string name="Cen_msg_missing_data">Faltan datos</string>
+    <string name="Cen_user_exist">El usuario ya se ecuentra</string>
+    <string name="Cen_much_text">Mucho texto</string>
+    <string name="Cen_not_email">Email no aceptado</string>
+    <string name="Cen_much_number">El numero debe ser de 8</string>
+    <string name="far_farm_title_name">Farmacia</string>
+    <string name="far_patient_txt">Paciente</string>
+    <string name="far_medicine_txt">Medicamento</string>
+    <string name="far_quantity_input">Cantidad</string>
+    <string name="far_Add_button">Agregar medicina</string>
+    <string name="far_price_Input">Precio</string>
+    <string name="far_medicine_Input">Nombre de la medicina</string>
+    <string name="far_name_input">Nombre</string>
+    <string name="far_id_input">Identificacion</string>
+    <string name="far_input_lastname">Apellido</string>
+    <string name="far_input_phone">Numero de telefono</string>
+    <string name="far_email_input">Correo electronico</string>
+    <string name="far_address_input">Direccion</string>
+    <string name="far_country_input">Pais</string>
+    <string name="far_Ins_new_Patient">Nuevo paciente</string>
+    <string name="far_success_addMedicine">Medicina agregada</string>
+    <string name="far_txt_failed">Algo fallo</string>
 
-    <string name="bib_save">Guardar</string>
-    <string name="bib_cancel">Cancelar</string>
-    <string name="bib_remove">Eliminar</string>
-    <string name="bib_add">Agregar</string>
-    <string name="bib_view">Ver</string>
-    <string name="bib_save_reservation">Guardar Reservación</string>
+    //main
+    <string name="nav_ContainerCont">Control de contenedores</string>
+    <string name="nav_ListCont">Listar contenedores</string>
 
-    <string name="bib_student_name">Nombre del Estudiante</string>
-    <string name="bib_book_code">Código del Libro</string>
-    <string name="bib_book_name">Nombre del Libro</string>
-    <string name="bib_reservation_date">Fecha de Reservación</string>
-    <string name="bib_return_date">Fecha de Devolución</string>
-    <string name="bib_library_location">Ubicación de la Biblioteca</string>
+    //Container
+    <string name="nav_containerNum">Número de contenedor</string>
+    <string name="nav_nomPer">Nombre del encargado</string>
+    <string name="day">dd/mm/yyyy</string>
+    <string name="nav_dayTxt">Dia del control</string>
+    <string name="nav_hour">hora de mantenimineto</string>
+    <string name="nav_typeCont">Tipo de contenedor</string>
+    <string name="nav_tempCont">Temperatura del contenedor</string>
+    <string name="nav_weight">Peso de contenedor</string>
+    <string name="nav_Product">Producto en el contenedor</string>
+    <string name="containerNotF">Contenedor no encontrado</string>
+    <string name="InsertC">Insertar contenedor</string>
+    <string name="delCont">Eliminar contenedor</string>
+    <string name="updCont">Actualizar contenedor</string>
+    <string name="LstConrt">Listar contenedores</string>
+    <string name="msgSucces">Insertado</string>
+    <string name="msgDel">Eliminado</string>
+    <string name="msgUpd">Actualizado</string>
+    <string name="msgErr">Faltan datos</string>
+    <string name="btn_insert_Cont">Registrar contenedor</string>
 
-    <string name="bib_student_name_hint">Nombre del Estudiante</string>
-    <string name="bib_book_code_hint">Código del Libro</string>
-    <string name="bib_book_name_hint">Nombre del Libro</string>
-    <string name="bib_reservation_date_hint">Fecha de Reservación (AAAA-MM-DD)</string>
-    <string name="bib_return_date_hint">Fecha de Devolución (AAAA-MM-DD)</string>
-    <string name="bib_library_location_hint">Ubicación de la Biblioteca</string>
 
-    <string name="reservation_saved">¡Reserva guardada!</string>
-    <string name="reservation_updated">¡Reserva actualizada!</string>
-    <string name="reservation_deleted">¡Reserva eliminada!</string>
-    <string name="reservation_not_found">¡Reserva no encontrada!</string>
-    <string name="reservation_duplicate">¡Reserva duplicada!</string>
-    <string name="invalid_date_format">Formato de fecha incorrecto</string>
-
-    <string name="error_student_name">El nombre del estudiante es obligatorio</string>
-    <string name="error_book_code">El código del libro es obligatorio</string>
-    <string name="error_book_name">El nombre del libro es obligatorio</string>
-    <string name="error_library_location">La ubicación de la biblioteca es obligatoria</string>
-    <string name="error_return_date">La fecha de devolución debe ser posterior a la fecha de reserva</string>
-
-    <string name="update_button_text">Actualizar</string>
-
-    <string name="bib_title">Reservas de Biblioteca</string>
-    <string name="bib_view_reservations">Ver Reservas</string>
-    <string name="bib_add_new_reservation">Añadir Nueva Reserva</string>
 </resources>
