@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -11,35 +11,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamenI"
-        tools:targetApi="34" >
+        tools:targetApi="34">
         <activity
-            android:name=".nom_MainActivity"
+            android:name=".nav_contList"
             android:exported="false" />
         <activity
-            android:name=".nom_Detalle_Empleados"
+            android:name=".nav_custom_list"
             android:exported="false" />
         <activity
-            android:name=".Lista_Empleados"
+            android:name=".nav_Control_Container"
             android:exported="false" />
         <activity
-            android:name=".tcam_Custom_List_Activity"
-            android:exported="false"
-            android:parentActivityName=".tcam_MainActivity" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
-            android:name=".EmailDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ema_listEmail"
-            android:exported="false" />
-        <activity
-            android:name=".ema_EmailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ema_MainActivity"
-            android:exported="true" />
+            android:name=".nav_main"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".cen_MainActivity"
             android:exported="false" />
@@ -56,19 +46,8 @@
             android:name=".cit_MainActivity"
             android:exported="false" />
         <activity
-            android:name=".tcam_MainActivity"
-            android:exported="true">
             android:name=".MainActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".inv_InventoryActivity" />
-
+            android:exported="true" />
     </application>
 
 </manifest>
