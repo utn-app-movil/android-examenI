@@ -13,17 +13,11 @@
         android:theme="@style/Theme.ExamenI"
         tools:targetApi="34">
         <activity
-            android:name=".cit_Modify"
             android:exported="false" />
         <activity
-            android:name=".cit_ViewList"
-            android:exported="false" />
-        <activity
-            android:name=".cit_PantallaCrud"
-            android:exported="false" />
-        <activity
-            android:name=".cit_ListaPersonalizada"
-            android:exported="false" />
+            android:name=".ema_MainActivity"
+            android:exported="true" />
+
         <activity
             android:name=".cen_MainActivity"
             android:exported="false" />
@@ -48,6 +42,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".inv_InventoryActivity" />
+
     </application>
 
 </manifest>
