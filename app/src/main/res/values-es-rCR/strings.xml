@@ -3,4 +3,11 @@
     <string name="app_name">Examen I</string>
     <string name="cap_AddTraining">Añadir Capacitación</string>
     <string name="cap_ListTraining">Lista Capacitaciones</string>
+    <string name="cap_mnu_save">Guardar</string>
+    <string name="cap_mnu_delete">Borrar</string>
+    <string name="cap_mnu_cancel">Cancelar</string>
+    <string name="cap_msgTrainingNotFound">Capacitacion no encontrada</string>
+    <string name="cap_msgSave">Se guarda exitosamente.</string>
+    <string name="cap_msgMissingData">Faltan datos porfavor revisar.</string>
+    <string name="cap_msgDelete">Se elimino exitosamente.</string>
 </resources>

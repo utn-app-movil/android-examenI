@@ -7,57 +7,166 @@
     android:layout_height="match_parent"
     tools:context=".cap_AddActivity">
 
-    <EditText
-        android:id="@+id/cap_editTextCourseCode"
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Course Code"
-        android:inputType="text"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        android:padding="16dp">
 
-    <EditText
-        android:id="@+id/cap_editTextDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Description"
-        android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@+id/cap_editTextCourseCode"
-        tools:layout_editor_absoluteX="0dp" />
+        <!-- ID (Oculto para el usuario) -->
+        <TableRow>
+            <TextView
+                android:id="@+id/cap_txtIdLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID" />
+            <EditText
+                android:id="@+id/cap_txtId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </TableRow>
 
-    <EditText
-        android:id="@+id/cap_editTextHours"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Hours"
-        android:inputType="number"
-        app:layout_constraintTop_toBottomOf="@+id/cap_editTextDescription"
-        tools:layout_editor_absoluteX="0dp" />
+        <!-- Nombre -->
+        <TableRow>
+            <TextView
+                android:id="@+id/cap_txtNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name" />
 
-    <EditText
-        android:id="@+id/cap_editTextDateTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Date and Time"
-        android:inputType="datetime"
-        app:layout_constraintTop_toBottomOf="@+id/cap_editTextHours"
-        tools:layout_editor_absoluteX="0dp" />
+            <EditText
+                android:id="@+id/cap_txtName"
+                android:layout_width="312dp"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </TableRow>
 
-    <EditText
-        android:id="@+id/et_cap_participant"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Participant Name"
-        android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@+id/cap_editTextDateTime"
-        tools:layout_editor_absoluteX="0dp" />
+        <!-- Apellido -->
+        <TableRow>
+            <TextView
+                android:id="@+id/cap_txtLastNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Name" />
+            <EditText
+                android:id="@+id/cap_txtLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </TableRow>
 
-    <Button
-        android:id="@+id/cap_btnSave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save"
-        app:layout_constraintTop_toBottomOf="@+id/et_cap_participant"
-        tools:layout_editor_absoluteX="0dp" />
+        <!-- Teléfono -->
+        <TableRow>
+            <TextView
+                android:id="@+id/cap_txtPhoneLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone" />
+            <EditText
+                android:id="@+id/cap_txtPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" />
+        </TableRow>
+
+        <!-- Correo Electrónico -->
+        <TableRow>
+            <TextView
+                android:id="@+id/cap_txtEmailLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email" />
+            <EditText
+                android:id="@+id/cap_txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </TableRow>
+
+        <!-- Dirección -->
+        <TableRow>
+            <TextView
+                android:id="@+id/cap_txtAddressLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address" />
+            <EditText
+                android:id="@+id/cap_txtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine" />
+        </TableRow>
+
+        <!-- País -->
+        <TableRow>
+            <TextView
+                android:id="@+id/cap_txtCountryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Country" />
+            <EditText
+                android:id="@+id/cap_txtCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </TableRow>
+
+        <!-- Código del Curso -->
+        <TableRow>
+            <TextView
+                android:id="@+id/cap_txtCourseCodeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course Code" />
+            <EditText
+                android:id="@+id/cap_txtCourseCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </TableRow>
+
+        <!-- Descripción del Curso -->
+        <TableRow>
+            <TextView
+                android:id="@+id/cap_txtDescriptionLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description" />
+            <EditText
+                android:id="@+id/cap_txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </TableRow>
+
+        <!-- Horas del Curso -->
+        <TableRow>
+            <TextView
+                android:id="@+id/cap_txtHoursLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hours" />
+            <EditText
+                android:id="@+id/cap_txtHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+        </TableRow>
+
+        <!-- Fecha y Hora -->
+        <TableRow>
+            <TextView
+                android:id="@+id/cap_txtDateTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date and Time" />
+            <EditText
+                android:id="@+id/cap_txtDateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="datetime" />
+        </TableRow>
+
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

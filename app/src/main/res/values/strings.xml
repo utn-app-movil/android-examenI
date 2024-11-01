@@ -2,4 +2,11 @@
     <string name="app_name">Test 1</string>
     <string name="cap_AddTraining">Add Training</string>
     <string name="cap_ListTraining">List Training</string>
+    <string name="cap_mnu_save">Save</string>
+    <string name="cap_mnu_delete">Delete</string>
+    <string name="cap_mnu_cancel">Cancel</string>
+    <string name="cap_msgTrainingNotFound">Training Not Found</string>
+    <string name="cap_msgSave">Saved successfully.</string>
+    <string name="cap_msgMissingData">Missing data please check.</string>
+    <string name="cap_msgDelete">Delete successfully.</string>
 </resources>

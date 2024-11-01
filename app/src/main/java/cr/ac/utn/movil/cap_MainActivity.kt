@@ -1,6 +1,9 @@
 package cr.ac.utn.movil
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -33,4 +36,25 @@ class cap_MainActivity : AppCompatActivity() {
             util.openActivity(this, cap_ListActivity::class.java)
         })
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.cap_main_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.cap_mnu_AddTraining -> {
+                util.openActivity(this, cap_AddActivity::class.java)
+                true
+            }
+            R.id.cap_mnu_ListTraining-> {
+                util.openActivity(this, cap_ListActivity::class.java)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 }
