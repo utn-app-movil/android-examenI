@@ -12,12 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamenI"
         tools:targetApi="34">
+
         <activity
-            android:name=".far_adding_patient"
+            android:name=".nav_contList"
             android:exported="false" />
         <activity
-            android:name=".far_activity_add"
+            android:name=".nav_custom_list"
             android:exported="false" />
+        <activity
+            android:name=".nav_Control_Container"
+            android:exported="false" />
+        <activity
+            android:name=".nav_main"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".cen_MainActivity"
             android:exported="false" />
@@ -35,16 +48,13 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"/>
-
+            android:exported="true" />
+        <activity
+            android:name=".far_adding_patient"
+            android:exported="false" />
         <activity
             android:name=".far_MainActivity"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
