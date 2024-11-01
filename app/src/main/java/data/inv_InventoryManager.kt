@@ -1,36 +1,48 @@
 package cr.ac.utn.appmovil.data
 
-import cr.ac.utn.appmovil.model.inv_InventoryEntry
-import identities.Identifier
-import cr.ac.utn.appmovil.interfaces.IDBManager
+import model.inv_Model
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
-object inv_InventoryManager : IDBManager {
-    private val inventoryEntries = mutableListOf<inv_InventoryEntry>()
+class inv_InventoryManager {
 
-    override fun add(obj: Identifier) {
-        if (obj is inv_InventoryEntry) {
-            inventoryEntries.add(obj)
+    private val memoryManager = MemoryManager  // Usando MemoryManager como base de datos en memoria
+
+    fun saveEntry(personId: String, personName: String, personEmail: String,
+                  productCode: String, productName: String, productQuantity: Int,
+                  providerName: String, unitCost: Double) {
+        val currentDateTime = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME)
+
+        val entry = inv_Model(
+            personId = personId,
+            personName = personName,
+            personEmail = personEmail,
+            productCode = productCode,
+            productName = productName,
+            productQuantity = productQuantity,
+            entryDateTime = currentDateTime,
+            providerName = providerName,
+            unitCost = unitCost
+        )
+
+        memoryManager.add(entry)
+    }
+
+
+    fun updateEntry(productCode: String, updatedEntry: inv_Model) {
+        val entry = memoryManager.getByFullDescription(updatedEntry.productName + " - " + productCode)
+        if (entry != null) {
+            memoryManager.update(updatedEntry)
         }
     }
 
-    override fun update(obj: Identifier) {
-        if (obj is inv_InventoryEntry) {
-            remove(obj.Id)
-            inventoryEntries.add(obj)
-        }
+    //obtener todos los ingresos de inventario
+    fun getAllEntries(): List<inv_Model> {
+        return memoryManager.getAll().filterIsInstance<inv_Model>()
     }
 
-    override fun remove(id: String) {
-        inventoryEntries.removeIf { it.Id == id }
-    }
-
-    override fun getAll(): List<Identifier> = inventoryEntries.toList()
-
-    override fun getByid(id: String): Identifier? {
-        return inventoryEntries.find { it.Id == id }
-    }
-
-    override fun getByFullDescription(fullDescription: String): Identifier? {
-        return inventoryEntries.find { it.FullDescription == fullDescription }
+    // Método para buscar un ingreso de inventario por el código del producto
+    fun getEntryByCode(productCode: String): inv_Model? {
+        return memoryManager.getAll().filterIsInstance<inv_Model>().find { it.productCode == productCode }
     }
 }

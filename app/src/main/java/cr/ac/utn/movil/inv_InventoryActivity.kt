@@ -1,64 +1,41 @@
 package cr.ac.utn.movil
 
 import android.os.Bundle
-import android.widget.Toast
+import android.widget.Button
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import cr.ac.utn.appmovil.data.inv_InventoryManager
-import cr.ac.utn.appmovil.model.inv_InventoryEntry
-import kotlinx.android.synthetic.main.activity_inv_inventory.*
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
+import model.inv_Model
 
 class inv_InventoryActivity : AppCompatActivity() {
+    private val manager = inv_InventoryManager()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_inv_inventory)
+        setContentView(R.layout.inventory_entry)
 
-        btnAddEntry.setOnClickListener {
-            val personId = etPersonId.text.toString()
-            val personName = etPersonName.text.toString()
-            val personEmail = etPersonEmail.text.toString()
-            val productCode = etProductCode.text.toString()
-            val productName = etProductName.text.toString()
-            val productQuantity = etProductQuantity.text.toString().toIntOrNull()
-            val providerName = etProviderName.text.toString()
-            val unitCost = etUnitCost.text.toString().toDoubleOrNull()
+        val personIdField = findViewById<EditText>(R.id.inputPersonId)
+        val personNameField = findViewById<EditText>(R.id.inputPersonName)
+        val personEmailField = findViewById<EditText>(R.id.inputPersonEmail)
+        val productCodeField = findViewById<EditText>(R.id.inputProductCode)
+        val productNameField = findViewById<EditText>(R.id.inputProductName)
+        val productQuantityField = findViewById<EditText>(R.id.inputProductQuantity)
+        val providerNameField = findViewById<EditText>(R.id.inputProviderName)
+        val unitCostField = findViewById<EditText>(R.id.inputUnitCost)
+        val saveButton = findViewById<Button>(R.id.buttonSaveEntry)
 
-            if (personId.isEmpty() || personName.isEmpty() || personEmail.isEmpty() ||
-                productCode.isEmpty() || productName.isEmpty() || productQuantity == null ||
-                providerName.isEmpty() || unitCost == null) {
-                Toast.makeText(this, "Todos los campos deben ser completados correctamente", Toast.LENGTH_SHORT).show()
-            } else {
-                val entryDateTime = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME)
+        saveButton.setOnClickListener {
+            val personId = personIdField.text.toString()
+            val personName = personNameField.text.toString()
+            val personEmail = personEmailField.text.toString()
+            val productCode = productCodeField.text.toString()
+            val productName = productNameField.text.toString()
+            val productQuantity = productQuantityField.text.toString().toIntOrNull() ?: 0
+            val providerName = providerNameField.text.toString()
+            val unitCost = unitCostField.text.toString().toDoubleOrNull() ?: 0.0
 
-                val newEntry = inv_InventoryEntry(
-                    personId = personId,
-                    personName = personName,
-                    personEmail = personEmail,
-                    productCode = productCode,
-                    productName = productName,
-                    productQuantity = productQuantity,
-                    entryDateTime = entryDateTime,
-                    providerName = providerName,
-                    unitCost = unitCost
-                )
-
-                inv_InventoryManager.add(newEntry)
-                Toast.makeText(this, "Entrada de inventario registrada", Toast.LENGTH_SHORT).show()
-                clearFields()
-            }
+            manager.saveEntry(personId, personName, personEmail, productCode, productName,
+                productQuantity, providerName, unitCost)
         }
-    }
-
-    private fun clearFields() {
-        etPersonId.text.clear()
-        etPersonName.text.clear()
-        etPersonEmail.text.clear()
-        etProductCode.text.clear()
-        etProductName.text.clear()
-        etProductQuantity.text.clear()
-        etProviderName.text.clear()
-        etUnitCost.text.clear()
     }
 }

@@ -6,39 +6,30 @@ import identities.Identifier
 object MemoryManager: IDBManager {
     private var objectList = mutableListOf<Identifier>()
 
-    override fun add (obj: Identifier){
+    override fun add(obj: Identifier) {
         objectList.add(obj)
     }
-    override fun update (obj: Identifier){
+
+    override fun update(obj: Identifier) {
         remove(obj.Id)
         objectList.add(obj)
-
     }
-    override fun remove (id: String){
+
+    override fun remove(id: String) {
         objectList.removeIf { it.Id.trim() == id.trim() }
     }
 
-    fun remove (obj: Identifier){
+    fun remove(obj: Identifier) {
         objectList.remove(obj)
     }
 
     override fun getAll(): List<Identifier> = objectList.toList()
 
     override fun getByid(id: String): Identifier? {
-        try {
-            var result = objectList.filter { (it.Id) == id }
-            return if(!result.any()) null else result[0]
-        }catch (e: Exception){
-            throw e
-        }
+        return objectList.find { it.Id == id }
     }
 
     override fun getByFullDescription(fullDescription: String): Identifier? {
-        try {
-            var result = objectList.filter { (it.FullDescription) == fullDescription }
-            return if(!result.any()) null else result[0]
-        }catch (e: Exception){
-            throw e
-        }
+        return objectList.find { it.FullDescription == fullDescription }
     }
 }

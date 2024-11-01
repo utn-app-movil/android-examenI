@@ -1,8 +1,8 @@
-package cr.ac.utn.appmovil.model
+package model
 
 import identities.Identifier
 
-data class inv_InventoryEntry(
+data class inv_Model(
     val personId: String,
     val personName: String,
     val personEmail: String,

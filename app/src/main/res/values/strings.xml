@@ -1,3 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Test 1</string>
+    <string name="hint_person_id">ID Persona</string>
+    <string name="hint_person_name">Nombre Persona</string>
+    <string name="hint_person_email">Correo Persona</string>
+    <string name="hint_product_code">Código Producto</string>
+    <string name="hint_product_name">Nombre Producto</string>
+    <string name="hint_product_quantity">Cantidad</string>
+    <string name="hint_provider_name">Nombre Proveedor</string>
+    <string name="hint_unit_cost">Costo por Unidad</string>
+    <string name="button_save">Guardar</string>
 </resources>
