@@ -48,6 +48,12 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+        <activity
+            android:name=".far_adding_patient"
+            android:exported="false" />
+        <activity
+            android:name=".far_MainActivity"
+            android:exported="true" >
+        </activity>
     </application>
-
 </manifest>
