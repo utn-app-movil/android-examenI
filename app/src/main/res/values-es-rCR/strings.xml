@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Examen I</string>
+    <string name="tcam_PersonName">Nombre completo</string>
+    <string name="tcam_DateTime">Fecha y hora</string>
+    <string name="tcam_ValueChange">Valor de tipo de cambio</string>
+    <string name="tcam_AmountChange">Monto a Cambiar</string>
+    <string name="tcam_CalculateAmount">Calcular monto a pagar</string>
+    <string name="tcam_AmountPay">Monto a pagar:</string>
+    <string name="tcam_addChange">Agregar tipo de cambio</string>
+    <string name="tcam_ViewChanges">Ver tipos de cambio</string>
+    <string name="tcam_Menu_Save">Guardar</string>
+    <string name="tcam_Menu_Delete">Eliminar</string>
+    <string name="tcam_Menu_Cancel">Cancelar</string>
     <string name="ema_btnaddemail">Agregar Correo</string>
     <string name="ema_btnviewemail">"Ver lista de correos "</string>
     <string name="mnusave">Guardar</string>
