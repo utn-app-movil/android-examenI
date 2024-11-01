@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Test 1</string>
+    <string name="tipo_de_licencia">Tipo de Licencia</string>
+    <string name="codigo_de_dictamen">Codigo de Dictamen</string>
+    <string name="fecha_de_renovacion">Fecha de Renovacion</string>
+    <string name="hora_de_renovacion">Hora de Renovacion</string>
+    <string name="puntaje_actual">Puntaje Actual</string>
+    <string name="acceder">Acceder</string>
 </resources>
