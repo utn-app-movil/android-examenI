@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Examen I</string>
+    <string name="ema_btnaddemail">Agregar Correo</string>
+    <string name="ema_btnviewemail">"Ver lista de correos "</string>
+    <string name="mnusave">Guardar</string>
+    <string name="mnuremove">Remover</string>
+    <string name="mnucancel">Cancelar</string>
+    <string name="EmailContactId">"Emisor "</string>
+    <string name="EmailMessage">Mensaje</string>
+    <string name="EmailSendDate">Fecha</string>
+    <string name="EmailCC">CC</string>
+    <string name="EmailBCC">CCO</string>
+    <string name="buttonSave">Guardar</string>
+    <string name="msgSave">"Informacion Guardada Correctamente "</string>
+    <string name="msgMissingData">"Datos no encontrados "</string>
+    <string name="msgDelete">"Eliminado "</string>
+    <string name="msgEmailIdMissing">...</string>
+    <string name="EmailTitle">Titulo del Mensaje</string>
 </resources>
