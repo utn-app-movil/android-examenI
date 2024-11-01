@@ -2,5 +2,6 @@
     <string name="app_name">Test 1</string>
     <string name="enf_btnIr">Go to the nursing</string>
     <string name="enf_btnGuardar">Save data</string>
+    <string name="enf_txtPresion">Arterial Presion</string>
 
 </resources>

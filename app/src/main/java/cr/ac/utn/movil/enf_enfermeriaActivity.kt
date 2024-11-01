@@ -1,83 +1,53 @@
-package cr.ac.utn.movil
-import android.annotation.SuppressLint
-import android.content.Intent
+package com.example.tuaplicacion
+
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
-class enf_enfermeriaActivity : AppCompatActivity() {
+class EnfermeriaActivity : AppCompatActivity() {
 
-    @SuppressLint("MissingInflatedId")
+    private lateinit var editTextPresionArterial: EditText
+    private lateinit var editTextPeso: EditText
+    private lateinit var editTextAltura: EditText
+    private lateinit var editTextOxigenacion: EditText
+    private lateinit var enf_btnGuardar: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_enf_main)
+        setContentView(R.layout.enf_activity_nursing_control)
 
-        btnGuardar.setOnClickListener {
-            guardarDatos()
+        editTextPresionArterial = findViewById(R.id.editTextPresionArterial)
+        editTextPeso = findViewById(R.id.editTextPeso)
+        editTextAltura = findViewById(R.id.editTextAltura)
+        editTextOxigenacion = findViewById(R.id.editTextOxigenacion)
+        var enf_btnGuardarGuardar = this.findViewById(R.id.enf_btnGuardar)
+
+        enf_btnGuardar.setOnClickListener {
+            guardarRegistro()
         }
     }
 
-    private fun guardarDatos() {
+    private fun guardarRegistro() {
         val presionArterial = editTextPresionArterial.text.toString()
         val peso = editTextPeso.text.toString()
         val altura = editTextAltura.text.toString()
         val oxigenacion = editTextOxigenacion.text.toString()
+        val fechaHora = SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault()).format(Date())
 
-        if (validarCampos(presionArterial, peso, altura, oxigenacion)) {
-            val mensaje = "Presión Arterial: $presionArterial\nPeso: $peso\nAltura: $altura\nOxigenación: $oxigenacion"
-            Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
+        val registro = RegistroEnfermeria(presionArterial, peso, altura, oxigenacion, fechaHora)
 
-            limpiarCampos()
-        }
-    }
+        Toast.makeText(this, "Registro guardado", Toast.LENGTH_SHORT).show()
 
-    private fun validarCampos(presionArterial: String, peso: String, altura: String, oxigenacion: String): Boolean {
-        return when {
-            presionArterial.isEmpty() -> {
-                mostrarMensaje("Por favor, ingresa la presión arterial.")
-                false
-            }
-            peso.isEmpty() -> {
-                mostrarMensaje("Por favor, ingresa el peso.")
-                false
-            }
-            altura.isEmpty() -> {
-                mostrarMensaje("Por favor, ingresa la altura.")
-                false
-            }
-            oxigenacion.isEmpty() -> {
-                mostrarMensaje("Por favor, ingresa la oxigenación.")
-                false
-            }
-            !esNumero(peso) -> {
-                mostrarMensaje("El peso debe ser un número válido.")
-                false
-            }
-            !esNumero(altura) -> {
-                mostrarMensaje("La altura debe ser un número válido.")
-                false
-            }
-            !esNumero(oxigenacion) -> {
-                mostrarMensaje("La oxigenación debe ser un número válido.")
-                false
-            }
-            else -> true
-        }
-    }
 
-    private fun esNumero(texto: String): Boolean {
-        return texto.toDoubleOrNull() != null
-    }
-
-    private fun mostrarMensaje(mensaje: String) {
-        Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show()
-    }
-
-    private fun limpiarCampos() {
         editTextPresionArterial.text.clear()
         editTextPeso.text.clear()
         editTextAltura.text.clear()
         editTextOxigenacion.text.clear()
     }
 }
+

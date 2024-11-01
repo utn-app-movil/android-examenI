@@ -3,4 +3,5 @@
     <string name="app_name">Examen I</string>
     <string name="enf_btnIr">Ir a la enfermeria</string>
     <string name="enf_btnGuardar">Guardar datos</string>
+    <string name="enf_txtPresion">Presion arterial</string>
 </resources>

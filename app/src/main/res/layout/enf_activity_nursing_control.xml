@@ -12,10 +12,10 @@
         android:text="Nursing Control"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.067" />
+        app:layout_constraintVertical_bias="0.022" />
 
     <Button
         android:id="@+id/enf_btnGuardar"
@@ -25,4 +25,50 @@
         tools:layout_editor_absoluteX="260dp"
         tools:layout_editor_absoluteY="551dp"
         tools:text="@string/enf_btnGuardar" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="482dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="68dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/enf_txtPresion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Presión Arterial:"
+                tools:text="@string/enf_txtPresion" />
+
+            <TextView
+                android:id="@+id/enf_txtPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peso:" />
+
+            <TextView
+                android:id="@+id/enf_txtAltura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Altura:" />
+
+            <TextView
+                android:id="@+id/enf_txtOxigenacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Oxigenación:" />
+
+            <TextView
+                android:id="@+id/enf_txtFechaHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fecha y hora de atención:" />
+
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
