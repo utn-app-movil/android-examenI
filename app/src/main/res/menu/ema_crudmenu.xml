@@ -1,0 +1,27 @@
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Grupo de acciones principales -->
+    <group android:id="@+id/group_main_actions"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/mnusave"
+            android:title="@string/mnusave"
+        app:showAsAction="ifRoom|withText" /> <!-- Muestra el texto solo si hay espacio -->
+
+        <item
+            android:id="@+id/mnucancel"
+            android:title="@string/mnucancel"
+        app:showAsAction="ifRoom|withText" />
+    </group>
+
+    <!-- Elemento desactivado -->
+    <item
+        android:id="@+id/mnudelete"
+        android:title="@string/mnuremove"
+    app:showAsAction="never"
+    android:enabled="false"
+    android:iconTint="@color/grayDark" /> <!-- Cambia el color del icono para indicar que está deshabilitado -->
+
+</menu>
