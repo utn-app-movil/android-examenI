@@ -29,6 +29,18 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".rec_RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".rec_ListActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".rec_DetailActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".rec_MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
