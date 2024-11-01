@@ -1,166 +1,167 @@
-package cr.ac.utn.appmovil.activities
+package cr.ac.utn.movil
 
+import cr.ac.utn.appmovil.util.util
 import android.os.Bundle
-import android.text.InputFilter
-import android.text.TextUtils
 import android.util.Log
-import android.util.Patterns
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import cr.ac.utn.appmovil.identities.Persona
-import cr.ac.utn.appmovil.identities.tcam_ExchangeTransaction
-import cr.ac.utn.appmovil.models.tcam_ExchangeTransactionModel
-import cr.ac.utn.appmovil.util.util
-import cr.ac.utn.movil.R
-import cr.ac.utn.movil.tcam_Custom_List_Activity
+import cr.ac.utn.appmovil.data.MemoryManager
+import identities.tcam_TypeChange
 import java.text.SimpleDateFormat
 import java.util.*
 
 class tcam_MainActivity : AppCompatActivity() {
 
-    private lateinit var tcam_txtFullName: EditText
-    private lateinit var tcam_ExchangeRate: EditText
-    private lateinit var tcam_edtAmount: EditText
-    private lateinit var tcam_txtDateTime: TextView
-    private lateinit var tcam_txtAmountToPay: TextView
-    private lateinit var transactionModel: tcam_ExchangeTransactionModel
-    private var isEditionMode: Boolean = false
-
-    val EXTRA_MESSAGE_TRANSACTION_ID = "com.blopix.myapplication.contactId"
-
+    private lateinit var txtFullName: EditText
+    private lateinit var txtDateTime: TextView
+    private lateinit var edtExchangeRate: EditText
+    private lateinit var edtAmount: EditText
+    private lateinit var spnExchangeType: Spinner
+    private lateinit var btnCalculate: Button
+    private lateinit var txtAmountToPay: TextView
+    private var isEditMode: Boolean = false
+    private var transactionId: String = UUID.randomUUID().toString()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tcam_main)
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        txtFullName = findViewById(R.id.tcam_txtFullName)
+        txtDateTime = findViewById(R.id.tcam_txtDateTime)
+        edtExchangeRate = findViewById(R.id.tcam_ExchangeRate)
+        edtAmount = findViewById(R.id.tcam_edtAmount)
+        spnExchangeType = findViewById(R.id.tcam_spnExchangeType)
+        btnCalculate = findViewById(R.id.tcam_btnCalculate)
+        txtAmountToPay = findViewById(R.id.tcam_txtAmountToPay)
 
-        // Inicialización del modelo y campos
-        transactionModel = tcam_ExchangeTransactionModel()
-        tcam_txtFullName = findViewById(R.id.tcam_txtFullName)
-        tcam_ExchangeRate = findViewById(R.id.tcam_ExchangeRate)
-        tcam_edtAmount = findViewById(R.id.tcam_edtAmount)
-        tcam_txtDateTime = findViewById(R.id.tcam_txtDateTime)
-        tcam_txtAmountToPay = findViewById(R.id.tcam_txtAmountToPay)
+        // Inicializar la fecha y hora actual
+        val currentDateTime = SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault()).format(Date())
+        txtDateTime.text = currentDateTime
 
-        setEditTextLimits()
+        // Configurar el Spinner
+        val exchangeTypes = arrayOf("Colones a Dólares", "Dólares a Colones")
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, exchangeTypes)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spnExchangeType.adapter = adapter
 
-        // Captura y muestra la fecha y hora actual
-        val currentDateTime = getCurrentDateTime()
-        tcam_txtDateTime.text = currentDateTime
-
-        val transactionInfo = intent.getStringExtra(EXTRA_MESSAGE_TRANSACTION_ID)
-        if (!transactionInfo.isNullOrEmpty()) loadTransaction(transactionInfo)
-
-        // Lógica para el botón de calcular
-        val tcam_btnCalculate: Button = findViewById(R.id.tcam_btnCalculate)
-        tcam_btnCalculate.setOnClickListener {
-            saveExchangeTransaction()
+        btnCalculate.setOnClickListener {
+            if (validateInputs()) {
+                calculateAmount()
+            } else {
+                Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_LONG).show()
+            }
         }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.tcam_main_menu, menu)
+        menuInflater.inflate(R.menu.tcam_crud_menu, menu)
+
+        if (isEditMode) {
+            menu?.findItem(R.id.menu_delete)?.isVisible = true
+            menu?.findItem(R.id.menu_delete)?.isEnabled = true
+        }
+
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.menu_contact -> {
-                util.openActivity(this, tcam_MainActivity::class.java, "", "")
-                return true
+            R.id.menu_save -> {
+                saveTransaction()
+                true
             }
-
-            R.id.menu_viewContactList -> {
-                util.openActivity(this, tcam_Custom_List_Activity::class.java, "", "")
-                return true
+            R.id.menu_delete -> {
+                showConfirmationDialog("delete")
+                true
             }
-
+            R.id.menu_cancel -> {
+                cleanTransaction()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
 
-    // Establece límites de caracteres
-    private fun setEditTextLimits() {
-        tcam_ExchangeRate.filters = arrayOf(InputFilter.LengthFilter(10))
-        tcam_edtAmount.filters = arrayOf(InputFilter.LengthFilter(10))
+    private fun validateInputs(): Boolean {
+        return txtFullName.text.isNotEmpty() &&
+                edtExchangeRate.text.isNotEmpty() &&
+                edtAmount.text.isNotEmpty()
     }
 
-    // Recupera la fecha y hora actual
-    private fun getCurrentDateTime(): String {
-        return SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date())
+    private fun calculateAmount() {
+        val exchangeRate = edtExchangeRate.text.toString().toDoubleOrNull() ?: 0.0
+        val amount = edtAmount.text.toString().toDoubleOrNull() ?: 0.0
+        val selectedExchangeType = spnExchangeType.selectedItem.toString()
+
+        val totalAmount = when (selectedExchangeType) {
+            "Colones a Dólares" -> if (exchangeRate != 0.0) roundUp(amount / exchangeRate, 2) else 0.0
+            "Dólares a Colones" -> roundUp(amount * exchangeRate, 2)
+            else -> 0.0
+        }
+
+        txtAmountToPay.text = "Monto a pagar: $totalAmount"
+
+        // Guardar la transacción en MemoryManager
+        val transaction = tcam_TypeChange(
+            id = transactionId,
+            _fullName = txtFullName.text.toString(),
+            _valueChange = exchangeRate,
+            _valueAmount = amount,
+            _totalAmount = totalAmount,
+            _dateTime = Date()
+        )
+        MemoryManager.add(transaction)
+
+        Toast.makeText(this, "Transacción guardada", Toast.LENGTH_LONG).show()
     }
 
-    private fun saveExchangeTransaction() {
-        try {
-            val fullName = tcam_txtFullName.text.toString().trim()
-            val exchangeRateString = tcam_ExchangeRate.text.toString().trim()
-            val amountString = tcam_edtAmount.text.toString().trim()
-
-            if (dataValidation(fullName, exchangeRateString, amountString)) {
-                val exchangeRate = exchangeRateString.toDouble()
-                val amount = amountString.toDouble()
-                val currentDateTime = tcam_txtDateTime.text.toString()
-
-                // Crea una nueva instancia de Persona
-                val persona = Persona(UUID.randomUUID().toString(), fullName, "", 0, "", "", "")
-
-                // Crea una nueva transacción
-                val transactionId = UUID.randomUUID().toString() // Genera un ID único
-                val transaction = tcam_ExchangeTransaction(
-                    transactionId,
-                    persona,
-                    currentDateTime,
-                    exchangeRate,
-                    amount
-                )
-
-                // Agrega la transacción al modelo
-                transactionModel.addTransaction(transaction)
-
-                // Muestra el monto a pagar
-                val totalAmount = exchangeRate * amount
-                tcam_txtAmountToPay.text = String.format("Monto a pagar: %.2f", totalAmount)
-
-                Toast.makeText(this, "Transacción guardada exitosamente.", Toast.LENGTH_SHORT)
-                    .show()
-            } else {
-                Toast.makeText(
-                    this,
-                    "Por favor, completa todos los campos correctamente.",
-                    Toast.LENGTH_LONG
-                ).show()
-            }
-        } catch (e: Exception) {
-            Log.e("Error", "Ocurrió un error: ${e.message}", e)
-            Toast.makeText(this, "Ocurrió un error: ${e.message}", Toast.LENGTH_LONG).show()
+    private fun saveTransaction() {
+        if (validateInputs()) {
+            calculateAmount()
+            util.openActivity(this, tcam_Custom_List_Activity::class.java, "", "")
+        } else {
+            Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_LONG).show()
         }
     }
 
-    private fun dataValidation(fullName: String, exchangeRate: String, amount: String): Boolean {
-        val isFullNameValid = fullName.isNotEmpty()
-        val isExchangeRateValid =
-            exchangeRate.toDoubleOrNull() != null && exchangeRate.toDouble() > 0
-        val isAmountValid = amount.toDoubleOrNull() != null && amount.toDouble() > 0
-
-        return isFullNameValid && isExchangeRateValid && isAmountValid
+    private fun showConfirmationDialog(action: String) {
+        val message = if (action == "delete") "¿Seguro que deseas eliminar la transacción?" else "¿Seguro que deseas limpiar los campos?"
+        AlertDialog.Builder(this).apply {
+            setTitle("Confirmación")
+            setMessage(message)
+            setPositiveButton("Sí") { _, _ ->
+                if (action == "delete") {
+                    performDeleteTransaction()
+                } else {
+                    cleanFields()
+                }
+            }
+            setNegativeButton("No", null)
+        }.show()
     }
 
-    private fun loadTransaction(transactionInfo: String) {
-        // Lógica para cargar la transacción, si es necesario
+    private fun performDeleteTransaction() {
+        Toast.makeText(this, "Transacción eliminada", Toast.LENGTH_SHORT).show()
+        cleanFields()
     }
+
+    private fun cleanTransaction() {
+        cleanFields()
+    }
+
+    private fun cleanFields() {
+        txtFullName.text.clear()
+        edtExchangeRate.text.clear()
+        edtAmount.text.clear()
+        txtAmountToPay.text = ""
+    }
+
+    private fun roundUp(value: Double, places: Int): Double {
+        val scale = Math.pow(10.0, places.toDouble()).toInt()
+        return Math.ceil(value * scale.toDouble()) / scale.toDouble()
+    }
+
 }

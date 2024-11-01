@@ -10,6 +10,9 @@
     <string name="tcam_AmountChange">Amount to change</string>
     <string name="tcam_addChange">Add Type change</string>
     <string name="tcam_ViewChanges">View Types of changes</string>
+    <string name="tcam_Menu_Save">Save</string>
+    <string name="tcam_Menu_Delete">Delete</string>
+    <string name="tcam_Menu_Cancel">Cancel</string>
 
 
     <string-array name="exchange_type_array">

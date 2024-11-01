@@ -14,7 +14,8 @@
         tools:targetApi="34">
         <activity
             android:name=".tcam_Custom_List_Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".tcam_MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
