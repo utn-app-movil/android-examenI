@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ExamenI"
         tools:targetApi="34">
         <activity
+            android:name=".EmailDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ema_listEmail"
             android:exported="false" />
         <activity
@@ -44,7 +47,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>

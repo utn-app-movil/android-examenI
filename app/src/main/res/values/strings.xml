@@ -11,10 +11,10 @@
 
     <string name="EmailContactId">Person ID</string>
     <string name="EmailMessage">Email Message</string>
-    <string name="EmailSubject">Email Subject</string>
-    <string name="EmailSendDate">Send Date (must be greater than the current date)</string>
-    <string name="EmailCC">CC (Carbon Copy)</string>
-    <string name="EmailBCC">BCC (Blind Carbon Copy)</string>
+    <string name="EmailTitle">Email Title</string>
+    <string name="EmailSendDate">Send Date </string>
+    <string name="EmailCC">CC </string>
+    <string name="EmailBCC">CCO </string>
     <string name="buttonSave">Save</string>
 
 

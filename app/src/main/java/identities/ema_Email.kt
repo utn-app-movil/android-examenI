@@ -5,37 +5,33 @@ import identities.Identifier
 // Definición de la entidad Email que hereda de Identifier
 class ema_Email : Identifier {
 
-    private var _subject: String = ""
+    private var _title: String = ""
     private var _message: String = ""
     private var _sendDate: String = ""
     private var _cc: String = ""
-    private var _bcc: String = ""
+    private var _cco: String = ""
 
     constructor()
 
     constructor(
         id: String,
-        subject: String,
+        title: String,
         message: String,
         sendDate: String,
         cc: String,
-        bcc: String
+        cco: String
     ) {
-
-        this._subject = subject
+        this.Id = id
+        this._title = title
         this._message = message
         this._sendDate = sendDate
         this._cc = cc
-        this._bcc = bcc
+        this._cco = cco
     }
 
     override val FullDescription: String
         get() = ""
 
-
-    var Subject: String
-        get() = _subject
-        set(value) { _subject = value }
 
     var Message: String
         get() = _message
@@ -49,9 +45,14 @@ class ema_Email : Identifier {
         get() = _cc
         set(value) { _cc = value }
 
-    var BCC: String
-        get() = _bcc
-        set(value) { _bcc = value }
+
+    var Title: String
+        get() = _title
+        set(value) { _title = value }
+
+    var CCO: String
+        get() = _cco
+        set(value) { _cco = value }
 }
 
 

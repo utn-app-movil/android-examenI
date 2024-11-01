@@ -8,7 +8,6 @@
     <string name="mnucancel">Cancelar</string>
     <string name="EmailContactId">"Emisor "</string>
     <string name="EmailMessage">Mensaje</string>
-    <string name="EmailSubject">Titulo del Mensaje</string>
     <string name="EmailSendDate">Fecha</string>
     <string name="EmailCC">CC</string>
     <string name="EmailBCC">CCO</string>
@@ -17,4 +16,5 @@
     <string name="msgMissingData">"Datos no encontrados "</string>
     <string name="msgDelete">"Eliminado "</string>
     <string name="msgEmailIdMissing">...</string>
+    <string name="EmailTitle">Titulo del Mensaje</string>
 </resources>

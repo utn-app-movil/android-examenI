@@ -1,5 +1,6 @@
 package cr.ac.utn.movil
 
+import android.annotation.SuppressLint
 import cr.ac.utn.appmovil.identities.ema_Email
 import cr.ac.utn.appmovil.model.ema_EmailModel
 import android.os.Bundle
@@ -15,14 +16,15 @@ import androidx.core.view.WindowInsetsCompat
 
 class ema_EmailActivity : AppCompatActivity() {
     private lateinit var txtId: EditText
-    private lateinit var txtSubject: EditText
+    private lateinit var txtTitle: EditText
     private lateinit var txtMessage: EditText
     private lateinit var txtSendDate: EditText
     private lateinit var txtCc: EditText
-    private lateinit var txtBcc: EditText
+    private lateinit var txtCco: EditText
     private lateinit var emailModel: ema_EmailModel
 
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -36,12 +38,12 @@ class ema_EmailActivity : AppCompatActivity() {
 
         // Inicialización de campos de entrada
         emailModel = ema_EmailModel()
-        txtId = findViewById(R.id.ema_idperson)
-        txtSubject = findViewById(R.id.ema_sub)
-        txtMessage = findViewById(R.id.ema_mess)
-        txtSendDate = findViewById(R.id.ema_date)
-        txtCc = findViewById(R.id.ema_cc)
-        txtBcc = findViewById(R.id.ema_cco)
+        txtId = findViewById(R.id.txt_id)
+        txtTitle = findViewById(R.id.txtTitle)
+        txtMessage = findViewById(R.id.txtmenss)
+        txtSendDate = findViewById(R.id.txtdate)
+        txtCc = findViewById(R.id.txtcc)
+        txtCco = findViewById(R.id.txtcco)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -54,15 +56,15 @@ class ema_EmailActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.mnusave -> {
                 saveEmail()
-                true
+                return true
             }
             R.id.mnudelete -> {
-                deleteEmail()
-                true
+                removeEmail()
+                return true
             }
             R.id.mnucancel -> {
                 cleanScreen()
-                true
+                return true
             }
             else -> super.onOptionsItemSelected(item)
         }
@@ -73,11 +75,11 @@ class ema_EmailActivity : AppCompatActivity() {
         try {
             val email = ema_Email()
             email.Id = txtId.text.toString()
-            email.Subject = txtSubject.text.toString()
+            email.Title = txtTitle.text.toString()
             email.Message = txtMessage.text.toString()
             email.SendDate = txtSendDate.text.toString()
             email.CC = txtCc.text.toString()
-            email.BCC = txtBcc.text.toString()
+            email.CCO = txtCco.text.toString()
 
 
             emailModel.addEmail(email)
@@ -89,7 +91,7 @@ class ema_EmailActivity : AppCompatActivity() {
     }
 
 
-    private fun deleteEmail() {
+    private fun removeEmail() {
         try {
             val emailId = txtId.text.toString()
             if (emailId.isNotEmpty()) {
@@ -107,11 +109,11 @@ class ema_EmailActivity : AppCompatActivity() {
     // Método para limpiar los campos de entrada
     private fun cleanScreen() {
         txtId.setText("")
-        txtSubject.setText("")
+        txtTitle.setText("")
         txtMessage.setText("")
         txtSendDate.setText("")
         txtCc.setText("")
-        txtBcc.setText("")
+        txtCco.setText("")
     }
 
 

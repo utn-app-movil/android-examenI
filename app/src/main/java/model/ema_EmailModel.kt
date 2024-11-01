@@ -24,6 +24,8 @@ class ema_EmailModel {
 
     // Obtener todos los correos electrónicos
     fun getEmails(): List<ema_Email> {
+        val emails = mutableListOf<String>()
+        dbManager.getAll().forEach{ i-> emails.add(i.Id)}
         return dbManager.getAll().filterIsInstance<ema_Email>()
     }
 
@@ -31,6 +33,8 @@ class ema_EmailModel {
     fun getEmail(id: String): ema_Email? {
         return dbManager.getByid(id) as? ema_Email
     }
+
+
 
     // Obtener correos electrónicos por fecha de envío mayor a la actual
     fun getEmailsAfterDate(date: String): List<ema_Email> {
