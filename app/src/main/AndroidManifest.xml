@@ -19,6 +19,18 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+            android:name=".EmailDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ema_listEmail"
+            android:exported="false" />
+        <activity
+            android:name=".ema_EmailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ema_MainActivity"
+            android:exported="true" />
+
         <activity
             android:name=".cen_MainActivity"
             android:exported="false" />
@@ -37,12 +49,17 @@
         <activity
             android:name=".tcam_MainActivity"
             android:exported="true">
+            android:name=".MainActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".inv_InventoryActivity" />
+
     </application>
 
 </manifest>

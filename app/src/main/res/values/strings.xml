@@ -19,4 +19,27 @@
         <item>Dollars to colones</item>
         <item>Colones to Dollars</item>
     </string-array>
+    <string name="ema_btnaddemail">Add Email</string>
+    <string name="ema_btnviewemail">View List Email</string>
+
+
+    <string name="mnusave">Save</string>
+    <string name="mnuremove">Remove</string>
+    <string name="mnucancel">Cancel</string>
+
+
+    <string name="EmailContactId">Person ID</string>
+    <string name="EmailMessage">Email Message</string>
+    <string name="EmailTitle">Email Title</string>
+    <string name="EmailSendDate">Send Date </string>
+    <string name="EmailCC">CC </string>
+    <string name="EmailBCC">CCO </string>
+    <string name="buttonSave">Save</string>
+
+
+    <string name="msgSave">Inf save</string>
+    <string name="msgMissingData">Data is no fount</string>
+    <string name="msgDelete">Delete</string>
+    <string name="msgEmailIdMissing">Email Missing</string>
+
 </resources>
