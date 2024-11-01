@@ -11,8 +11,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import cr.ac.utn.appmovil.util.EXTRA_MESSAGE_ID
-import identities.cap_Capacitacion
-import model.cap_CapacitacionModel
+import identities.cap_Training
+import model.cap_TrainingModel
 
 class cap_AddActivity : AppCompatActivity() {
 
@@ -29,7 +29,7 @@ class cap_AddActivity : AppCompatActivity() {
     private lateinit var txtHours: EditText
     private lateinit var txtDateTime: EditText
 
-    private lateinit var capacitacionModel: cap_CapacitacionModel
+    private lateinit var capacitacionModel: cap_TrainingModel
     private var isEditionMode: Boolean = false
     private lateinit var menuItemDelete: MenuItem
 
@@ -56,7 +56,7 @@ class cap_AddActivity : AppCompatActivity() {
         txtHours = findViewById(R.id.cap_txtHours)
         txtDateTime = findViewById(R.id.cap_txtDateTime)
 
-        capacitacionModel = cap_CapacitacionModel(this)
+        capacitacionModel = cap_TrainingModel(this)
 
         // Verifica si se está en modo edición
         val capacitacionId = intent.getStringExtra(EXTRA_MESSAGE_ID)
@@ -91,7 +91,7 @@ class cap_AddActivity : AppCompatActivity() {
 
     private fun saveCapacitacion() {
         try {
-            val capacitacion = cap_Capacitacion(
+            val capacitacion = cap_Training(
                 id = txtId.text.toString(),
                 _name = txtName.text.toString(),
                 _lastName = txtLastName.text.toString(),
@@ -121,7 +121,7 @@ class cap_AddActivity : AppCompatActivity() {
         }
     }
 
-    private fun dataValidation(capacitacion: cap_Capacitacion): Boolean {
+    private fun dataValidation(capacitacion: cap_Training): Boolean {
         return capacitacion.Id.isNotEmpty() &&
                 capacitacion.name.isNotEmpty() &&
                 capacitacion.lastName.isNotEmpty() &&
@@ -160,7 +160,7 @@ class cap_AddActivity : AppCompatActivity() {
 
     private fun loadCapacitacion(id: String) {
         try {
-            val capacitacion = capacitacionModel.getCapacitacion(id) as cap_Capacitacion
+            val capacitacion = capacitacionModel.getCapacitacion(id) as cap_Training
             txtId.setText(capacitacion.Id)
             txtName.setText(capacitacion.name)
             txtLastName.setText(capacitacion.lastName)

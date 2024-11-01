@@ -10,7 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import cr.ac.utn.appmovil.util.EXTRA_MESSAGE_ID
 import cr.ac.utn.appmovil.util.util
-import model.cap_CapacitacionModel
+import model.cap_TrainingModel
 
 class cap_ListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,15 +22,15 @@ class cap_ListActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        var capacitacionModel = cap_CapacitacionModel(this)
+        var trainingModel = cap_TrainingModel(this)
         val lstCustomList = findViewById<ListView>(R.id.Cap_lstCustomList)
-        var capacitacionList = capacitacionModel.getCapacitaciones()
+        var trainingList = trainingModel.getCapacitaciones()
 
-        val adapter = cap_CapListAdapter (this, R.layout.capacitacion_item_list, capacitacionList)
+        val adapter = cap_CapListAdapter (this, R.layout.cap_training_item_list, trainingList)
         lstCustomList.adapter = adapter
 
         lstCustomList.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
-            val capacitacionId = capacitacionList[position].Id
+            val capacitacionId = trainingList[position].Id
             util.openActivity(this, cap_AddActivity::class.java, EXTRA_MESSAGE_ID, capacitacionId)
         }
     }

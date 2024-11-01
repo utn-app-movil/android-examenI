@@ -14,11 +14,12 @@
 
         <!-- ID (Oculto para el usuario) -->
         <TableRow>
+
             <TextView
                 android:id="@+id/cap_txtIdLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ID" />
+                android:text="@string/cap_TrainingID" />
             <EditText
                 android:id="@+id/cap_txtId"
                 android:layout_width="match_parent"
@@ -28,11 +29,12 @@
 
         <!-- Nombre -->
         <TableRow>
+
             <TextView
                 android:id="@+id/cap_txtNameLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name" />
+                android:text="@string/cap_TrainingName" />
 
             <EditText
                 android:id="@+id/cap_txtName"
@@ -43,11 +45,12 @@
 
         <!-- Apellido -->
         <TableRow>
+
             <TextView
                 android:id="@+id/cap_txtLastNameLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Last Name" />
+                android:text="@string/cap_LastName" />
             <EditText
                 android:id="@+id/cap_txtLastName"
                 android:layout_width="match_parent"
@@ -57,11 +60,12 @@
 
         <!-- Teléfono -->
         <TableRow>
+
             <TextView
                 android:id="@+id/cap_txtPhoneLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Phone" />
+                android:text="@string/cap_TrainingPhone" />
             <EditText
                 android:id="@+id/cap_txtPhone"
                 android:layout_width="match_parent"
@@ -71,11 +75,12 @@
 
         <!-- Correo Electrónico -->
         <TableRow>
+
             <TextView
                 android:id="@+id/cap_txtEmailLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Email" />
+                android:text="@string/cap_TrainingEmail" />
             <EditText
                 android:id="@+id/cap_txtEmail"
                 android:layout_width="match_parent"
@@ -85,11 +90,12 @@
 
         <!-- Dirección -->
         <TableRow>
+
             <TextView
                 android:id="@+id/cap_txtAddressLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Address" />
+                android:text="@string/cap_TrainingAddress" />
             <EditText
                 android:id="@+id/cap_txtAddress"
                 android:layout_width="match_parent"
@@ -99,11 +105,12 @@
 
         <!-- País -->
         <TableRow>
+
             <TextView
                 android:id="@+id/cap_txtCountryLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Country" />
+                android:text="@string/cap_TrainingCountry" />
             <EditText
                 android:id="@+id/cap_txtCountry"
                 android:layout_width="match_parent"
@@ -113,11 +120,12 @@
 
         <!-- Código del Curso -->
         <TableRow>
+
             <TextView
                 android:id="@+id/cap_txtCourseCodeLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Course Code" />
+                android:text="@string/cap_TrainingCourseCode" />
             <EditText
                 android:id="@+id/cap_txtCourseCode"
                 android:layout_width="match_parent"
@@ -127,11 +135,12 @@
 
         <!-- Descripción del Curso -->
         <TableRow>
+
             <TextView
                 android:id="@+id/cap_txtDescriptionLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description" />
+                android:text="@string/cap_TrainingDescription" />
             <EditText
                 android:id="@+id/cap_txtDescription"
                 android:layout_width="match_parent"
@@ -141,11 +150,12 @@
 
         <!-- Horas del Curso -->
         <TableRow>
+
             <TextView
                 android:id="@+id/cap_txtHoursLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hours" />
+                android:text="@string/cap_TrainingHours" />
             <EditText
                 android:id="@+id/cap_txtHours"
                 android:layout_width="match_parent"
@@ -155,11 +165,12 @@
 
         <!-- Fecha y Hora -->
         <TableRow>
+
             <TextView
                 android:id="@+id/cap_txtDateTimeLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Date and Time" />
+                android:text="@string/cap_TrainingDate" />
             <EditText
                 android:id="@+id/cap_txtDateTime"
                 android:layout_width="match_parent"

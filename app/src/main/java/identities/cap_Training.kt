@@ -1,12 +1,10 @@
 package identities
 
-import identities.Identifier
-
 /**
  * cap_Capacitacion: Clase que representa una capacitación.
  * Hereda de Identifier para ser compatible con MemoryManager.
  */
-class cap_Capacitacion(
+class cap_Training(
     id: String,
     private var _name: String = "",
     private var _lastName: String = "",

@@ -7,18 +7,18 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import cr.ac.utn.movil.R
-import identities.cap_Capacitacion
+import identities.cap_Training
 
 class cap_CapListAdapter(
     context: Context,
     resource: Int,
-    private val datasource: List<cap_Capacitacion>
-) : ArrayAdapter<cap_Capacitacion>(context, resource, datasource) {
+    private val datasource: List<cap_Training>
+) : ArrayAdapter<cap_Training>(context, resource, datasource) {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        val rowView = convertView ?: inflater.inflate(R.layout.capacitacion_item_list, parent, false)
+        val rowView = convertView ?: inflater.inflate(R.layout.cap_training_item_list, parent, false)
 
         // Obtén las referencias de los TextViews en el layout
         val lbFullName = rowView.findViewById<TextView>(R.id.cap_lbItemFullName)

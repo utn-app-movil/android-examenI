@@ -9,4 +9,15 @@
     <string name="cap_msgSave">Saved successfully.</string>
     <string name="cap_msgMissingData">Missing data please check.</string>
     <string name="cap_msgDelete">Delete successfully.</string>
+    <string name="cap_TrainingID">ID</string>
+    <string name="cap_TrainingName">Name</string>
+    <string name="cap_LastName">Last Name</string>
+    <string name="cap_TrainingPhone">Phone</string>
+    <string name="cap_TrainingEmail">Email</string>
+    <string name="cap_TrainingAddress">Address</string>
+    <string name="cap_TrainingCountry">Country</string>
+    <string name="cap_TrainingCourseCode">Course Code</string>
+    <string name="cap_TrainingDescription">Description</string>
+    <string name="cap_TrainingHours">Hours</string>
+    <string name="cap_TrainingDate">Date</string>
 </resources>
