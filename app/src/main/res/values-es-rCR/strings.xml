@@ -1,4 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Examen I</string>
+    <string name="vul_NotFound">Datos no encontrados</string>
+    <string name="vul_addPerson">Añadir Persona</string>
+    <string name="vul_viewList">Ver Lista</string>
+    <string name="vul_ID">Cedula</string>
+    <string name="vul_PersonName">Nombre</string>
+    <string name="vul_PersonLasName">Apellido</string>
+    <string name="vul_PersonPhone">Phone</string>
+    <string name="vul_PersonEmail">Correo Electronico</string>
+    <string name="vul_PersonAddress">Direccion</string>
+    <string name="vul_PersonCountry">Pais de origien</string>
+    <string name="vul_PersonDestinationCountry">Pais de destino</string>
+    <string name="vul_PersonFlightNumber">Numero de vuelo</string>
+    <string name="vul_PersonFlightDate">Fecha de vuelo</string>
+    <string name="vul_Save">Guardar</string>
+    <string name="vul_Cancel">Cancelar</string>
+    <string name="vul_Delete">Borrar</string>
+    <string name="vul_CloseDialogTitle">Cerrar Aplicacion</string>
+    <string name="vul_Yes">Si</string>
+    <string name="vul_No">No</string>
+    <string name="vul_CloseDialog">¿Desea cerrar la aplicacion?</string>
+    <string name="vul_Succesfully">Hecho</string>
+    <string name="vul_Wrong">Incorrecto</string>
+    <string name="vul_WarningID">Cedula requerida</string>
+    <string name="vul_WarningName">Nombre requerido</string>
+    <string name="vul_WarningLastName">Apellido requerido</string>
+    <string name="vul_WarningPhone">Telefono requierido</string>
+    <string name="vul_WarningEmail">Correo electronico requerido</string>
+    <string name="vul_WarningAddress">Direccion requierida</string>
+    <string name="vul_WarningCountry">Pais de origien requerido</string>
+    <string name="vul_WarningCountryDestination">Pais de destino requierido</string>
+    <string name="vul_WarningFlightNumber">Numero de vuelo requierido</string>
+    <string name="vul_WarningFlightDate">Fecha de vuelo requierido</string>
+    <string name="vul_WarningPhoneNumber">Numero de telefono invalido</string>
+    <string name="vul_WarningDateFormat">Formato de fecha invalido use DD/MM/AAAA</string>
+    <string name="vul_ASKDelete">Desea eliminar el contacto?</string>
+    <string name="vul_ASKConfirmation">Continuar</string>
+    <string name="vul_ContactExists">El contacto ya existe</string>
 </resources>

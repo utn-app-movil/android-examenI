@@ -5,12 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".vul_viewListActivity">
 
-    <Button
-        android:id="@+id/btnMainVulApp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="App de Vuelos"
-        tools:layout_editor_absoluteX="2dp" />
+    <ListView
+        android:id="@+id/lstPersonsList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,15 @@
         android:theme="@style/Theme.ExamenI"
         tools:targetApi="34">
         <activity
+            android:name=".vul_viewListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".vul_AddPersonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".vul_MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".cen_MainActivity"
             android:exported="false" />
         <activity
