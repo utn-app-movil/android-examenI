@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Título de la aplicación -->
     <string name="app_name">Examen I</string>
+
+    <!-- Strings de Bairon-Examen1 -->
     <string name="cap_AddTraining">Añadir Capacitación</string>
     <string name="cap_ListTraining">Lista Capacitaciones</string>
     <string name="cap_mnu_save">Guardar</string>
@@ -10,15 +13,57 @@
     <string name="cap_msgSave">Se guarda exitosamente.</string>
     <string name="cap_msgMissingData">Faltan datos porfavor revisar.</string>
     <string name="cap_msgDelete">Se elimino exitosamente.</string>
-    <string name="cap_TrainingID">Identidicador</string>
+    <string name="cap_TrainingID">Identificador</string>
     <string name="cap_TrainingName">Nombre</string>
     <string name="cap_LastName">Apellido</string>
-    <string name="cap_TrainingPhone">Telefono</string>
+    <string name="cap_TrainingPhone">Teléfono</string>
     <string name="cap_TrainingEmail">Correo</string>
-    <string name="cap_TrainingAddress">Direccion</string>
-    <string name="cap_TrainingCountry">Pais</string>
-    <string name="cap_TrainingCourseCode">Codigo del Curso</string>
-    <string name="cap_TrainingDescription">Descripcion</string>
+    <string name="cap_TrainingAddress">Dirección</string>
+    <string name="cap_TrainingCountry">País</string>
+    <string name="cap_TrainingCourseCode">Código del Curso</string>
+    <string name="cap_TrainingDescription">Descripción</string>
     <string name="cap_TrainingHours">Horas</string>
     <string name="cap_TrainingDate">Fecha</string>
+
+    <!-- Strings de main (Farmacia y Contenedor) -->
+    <string name="far_farm_title_name">Farmacia</string>
+    <string name="far_patient_txt">Paciente</string>
+    <string name="far_medicine_txt">Medicamento</string>
+    <string name="far_quantity_input">Cantidad</string>
+    <string name="far_Add_button">Agregar medicina</string>
+    <string name="far_price_Input">Precio</string>
+    <string name="far_medicine_Input">Nombre de la medicina</string>
+    <string name="far_name_input">Nombre</string>
+    <string name="far_id_input">Identificación</string>
+    <string name="far_input_lastname">Apellido</string>
+    <string name="far_input_phone">Número de teléfono</string>
+    <string name="far_email_input">Correo electrónico</string>
+    <string name="far_address_input">Dirección</string>
+    <string name="far_country_input">País</string>
+    <string name="far_Ins_new_Patient">Nuevo paciente</string>
+    <string name="far_success_addMedicine">Medicina agregada</string>
+    <string name="far_txt_failed">Algo falló</string>
+
+    <!-- Contenedor -->
+    <string name="nav_ContainerCont">Control de contenedores</string>
+    <string name="nav_ListCont">Listar contenedores</string>
+    <string name="nav_containerNum">Número de contenedor</string>
+    <string name="nav_nomPer">Nombre del encargado</string>
+    <string name="day">dd/mm/yyyy</string>
+    <string name="nav_dayTxt">Día del control</string>
+    <string name="nav_hour">Hora de mantenimiento</string>
+    <string name="nav_typeCont">Tipo de contenedor</string>
+    <string name="nav_tempCont">Temperatura del contenedor</string>
+    <string name="nav_weight">Peso de contenedor</string>
+    <string name="nav_Product">Producto en el contenedor</string>
+    <string name="containerNotF">Contenedor no encontrado</string>
+    <string name="InsertC">Insertar contenedor</string>
+    <string name="delCont">Eliminar contenedor</string>
+    <string name="updCont">Actualizar contenedor</string>
+    <string name="LstConrt">Listar contenedores</string>
+    <string name="msgSucces">Insertado</string>
+    <string name="msgDel">Eliminado</string>
+    <string name="msgUpd">Actualizado</string>
+    <string name="msgErr">Faltan datos</string>
+    <string name="btn_insert_Cont">Registrar contenedor</string>
 </resources>
