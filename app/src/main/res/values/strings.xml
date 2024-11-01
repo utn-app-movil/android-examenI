@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">Test 1</string>
+    <!-- Título principal -->
+    <string name="app_name">Contribution Dashboard</string>
+    <string name="main_title">Contribution Dashboard</string>
+
+    <!-- Pistas para los campos de entrada -->
+    <string name="hint_person_name">Person name</string>
+    <string name="hint_total_contributions">Total of contributions</string>
+    <string name="hint_day">Day</string>
+    <string name="hint_month">Month</string>
+    <string name="hint_year">Year</string>
+
+    <!-- Texto de los botones -->
+    <string name="save_contribution">Save Contribution</string>
+    <string name="view_dashboard">View Dashboard</string>
+    <string name="update_contribution">con_update_contribution\n</string>
 </resources>
