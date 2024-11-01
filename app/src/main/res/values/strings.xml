@@ -1,5 +1,4 @@
 <resources>
-
     <string name="app_name">Test 1</string>
     <string name="tipo_de_licencia">Tipo de Licencia</string>
     <string name="codigo_de_dictamen">Codigo de Dictamen</string>
