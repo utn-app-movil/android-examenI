@@ -5,7 +5,7 @@
     <string name="far_patient_txt">Paciente</string>
     <string name="far_medicine_txt">Medicamento</string>
     <string name="far_quantity_input">Cantidad</string>
-    <string name="far_Add_button">Agregar</string>
+    <string name="far_Add_button">Agregar medicina</string>
     <string name="far_price_Input">Precio</string>
     <string name="far_medicine_Input">Nombre de la medicina</string>
     <string name="far_name_input">Nombre</string>
@@ -16,4 +16,5 @@
     <string name="far_address_input">Direccion</string>
     <string name="far_country_input">Pais</string>
     <string name="far_Ins_new_Patient">Nuevo paciente</string>
+    <string name="far_success_addMedicine">Medicina agregada</string>
 </resources>

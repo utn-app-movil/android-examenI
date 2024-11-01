@@ -25,5 +25,7 @@ class far_MainActivity : AppCompatActivity() {
             util.openActivity(this, far_adding_patient::class.java)
         })
 
+
+
     }
 }
