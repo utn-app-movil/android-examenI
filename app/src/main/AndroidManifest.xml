@@ -13,16 +13,10 @@
         android:theme="@style/Theme.ExamenI"
         tools:targetApi="34">
         <activity
-            android:name=".nav_contList"
             android:exported="false" />
         <activity
-            android:name=".nav_custom_list"
             android:exported="false" />
         <activity
-            android:name=".nav_Control_Container"
-            android:exported="false" />
-        <activity
-            android:name=".nav_main"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,13 +41,6 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
-        <activity
-            android:name=".far_adding_patient"
             android:exported="false" />
-        <activity
-            android:name=".far_MainActivity"
-            android:exported="true" >
-        </activity>
     </application>
 </manifest>
