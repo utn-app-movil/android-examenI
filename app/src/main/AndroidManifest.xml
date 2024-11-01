@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ExamenI"
         tools:targetApi="34">
         <activity
+            android:name=".tcam_Custom_List_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
             android:name=".cen_MainActivity"
             android:exported="false" />
         <activity
@@ -28,7 +34,7 @@
             android:name=".cit_MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".tcam_MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
