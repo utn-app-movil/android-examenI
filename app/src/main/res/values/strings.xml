@@ -16,4 +16,5 @@
     <string name="far_country_input">Country</string>
     <string name="far_Ins_new_Patient">Insert patient</string>
     <string name="far_success_addMedicine">Medicine added</string>
+    <string name="far_txt_failed">Something wrong</string>
 </resources>

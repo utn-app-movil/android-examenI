@@ -1,10 +1,11 @@
 package identities
 
-class far_Medicine {
+import identities.Identifier
+
+class far_Medicine: Identifier {
     private var _name: String = ""
     private var _price: Int = 0
     private var _quantity: Int = 0
-
 
     constructor()
 
@@ -13,6 +14,9 @@ class far_Medicine {
         this._price = price
         this._quantity = quantity
     }
+
+    override val FullDescription: String
+        get() = this._name + " " + this._quantity + " " + this.price
 
     var name: String
         get() = this._name

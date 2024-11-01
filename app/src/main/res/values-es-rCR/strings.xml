@@ -17,4 +17,5 @@
     <string name="far_country_input">Pais</string>
     <string name="far_Ins_new_Patient">Nuevo paciente</string>
     <string name="far_success_addMedicine">Medicina agregada</string>
+    <string name="far_txt_failed">Algo fallo</string>
 </resources>
