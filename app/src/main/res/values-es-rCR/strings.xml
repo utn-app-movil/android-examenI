@@ -1,42 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Application Name -->
     <string name="app_name">Examen I</string>
+
+    <!-- Person Management Section -->
     <string name="vul_NotFound">Datos no encontrados</string>
     <string name="vul_addPerson">Añadir Persona</string>
     <string name="vul_viewList">Ver Lista</string>
-    <string name="vul_ID">Cedula</string>
+    <string name="vul_ID">Cédula</string>
     <string name="vul_PersonName">Nombre</string>
     <string name="vul_PersonLasName">Apellido</string>
-    <string name="vul_PersonPhone">Phone</string>
-    <string name="vul_PersonEmail">Correo Electronico</string>
-    <string name="vul_PersonAddress">Direccion</string>
-    <string name="vul_PersonCountry">Pais de origien</string>
-    <string name="vul_PersonDestinationCountry">Pais de destino</string>
-    <string name="vul_PersonFlightNumber">Numero de vuelo</string>
+    <string name="vul_PersonPhone">Teléfono</string>
+    <string name="vul_PersonEmail">Correo Electrónico</string>
+    <string name="vul_PersonAddress">Dirección</string>
+    <string name="vul_PersonCountry">País de origen</string>
+    <string name="vul_PersonDestinationCountry">País de destino</string>
+    <string name="vul_PersonFlightNumber">Número de vuelo</string>
     <string name="vul_PersonFlightDate">Fecha de vuelo</string>
     <string name="vul_Save">Guardar</string>
     <string name="vul_Cancel">Cancelar</string>
     <string name="vul_Delete">Borrar</string>
-    <string name="vul_CloseDialogTitle">Cerrar Aplicacion</string>
-    <string name="vul_Yes">Si</string>
+    <string name="vul_CloseDialogTitle">Cerrar Aplicación</string>
+    <string name="vul_Yes">Sí</string>
     <string name="vul_No">No</string>
-    <string name="vul_CloseDialog">¿Desea cerrar la aplicacion?</string>
-    <string name="vul_Succesfully">Hecho</string>
+    <string name="vul_CloseDialog">¿Desea cerrar la aplicación?</string>
+    <string name="vul_Successfully">Hecho</string>
     <string name="vul_Wrong">Incorrecto</string>
-    <string name="vul_WarningID">Cedula requerida</string>
+    <string name="vul_WarningID">Cédula requerida</string>
     <string name="vul_WarningName">Nombre requerido</string>
     <string name="vul_WarningLastName">Apellido requerido</string>
-    <string name="vul_WarningPhone">Telefono requierido</string>
-    <string name="vul_WarningEmail">Correo electronico requerido</string>
-    <string name="vul_WarningAddress">Direccion requierida</string>
-    <string name="vul_WarningCountry">Pais de origien requerido</string>
-    <string name="vul_WarningCountryDestination">Pais de destino requierido</string>
-    <string name="vul_WarningFlightNumber">Numero de vuelo requierido</string>
-    <string name="vul_WarningFlightDate">Fecha de vuelo requierido</string>
-    <string name="vul_WarningPhoneNumber">Numero de telefono invalido</string>
-    <string name="vul_WarningDateFormat">Formato de fecha invalido use DD/MM/AAAA</string>
-    <string name="vul_ASKDelete">Desea eliminar el contacto?</string>
+    <string name="vul_WarningPhone">Teléfono requerido</string>
+    <string name="vul_WarningEmail">Correo electrónico requerido</string>
+    <string name="vul_WarningAddress">Dirección requerida</string>
+    <string name="vul_WarningCountry">País de origen requerido</string>
+    <string name="vul_WarningCountryDestination">País de destino requerido</string>
+    <string name="vul_WarningFlightNumber">Número de vuelo requerido</string>
+    <string name="vul_WarningFlightDate">Fecha de vuelo requerida</string>
+    <string name="vul_WarningPhoneNumber">Número de teléfono inválido</string>
+    <string name="vul_WarningDateFormat">Formato de fecha inválido, use DD/MM/AAAA</string>
+    <string name="vul_ASKDelete">¿Desea eliminar el contacto?</string>
     <string name="vul_ASKConfirmation">Continuar</string>
     <string name="vul_ContactExists">El contacto ya existe</string>
-    <string name="vul_CustomView">Ver lista customisada</string>
+    <string name="vul_CustomView">Ver lista personalizada</string>
+
+    <!-- Pharmacy Section -->
+    <string name="far_farm_title_name">Farmacia</string>
+    <string name="far_patient_txt">Paciente</string>
+    <string name="far_medicine_txt">Medicamento</string>
+    <string name="far_quantity_input">Cantidad</string>
+    <string name="far_Add_button">Agregar medicina</string>
+    <string name="far_price_Input">Precio</string>
+    <string name="far_medicine_Input">Nombre de la medicina</string>
+    <string name="far_name_input">Nombre</string>
+    <string name="far_id_input">Identificación</string>
+    <string name="far_input_lastname">Apellido</string>
+    <string name="far_input_phone">Número de teléfono</string>
+    <string name="far_email_input">Correo electrónico</string>
+    <string name="far_address_input">Dirección</string>
+    <string name="far_country_input">País</string>
+    <string name="far_Ins_new_Patient">Nuevo paciente</string>
+    <string name="far_success_addMedicine">Medicina agregada</string>
+    <string name="far_txt_failed">Algo falló</string>
+
+    <!-- Container Control Section -->
+    <string name="nav_ContainerCont">Control de contenedores</string>
+    <string name="nav_ListCont">Listar contenedores</string>
+    <string name="nav_containerNum">Número de contenedor</string>
+    <string name="nav_nomPer">Nombre del encargado</string>
+    <string name="day">dd/mm/yyyy</string>
+    <string name="nav_dayTxt">Día del control</string>
+    <string name="nav_hour">Hora de mantenimiento</string>
+    <string name="nav_typeCont">Tipo de contenedor</string>
+    <string name="nav_tempCont">Temperatura del contenedor</string>
+    <string name="nav_weight">Peso del contenedor</string>
+    <string name="nav_Product">Producto en el contenedor</string>
+
+    <!-- Spinner Options -->
+    <string-array name="datos">
+        <item>Seco</item>
+        <item>Húmedo</item>
+    </string-array>
+
+    <!-- CRUD Operations -->
+    <string name="containerNotF">Contenedor no encontrado</string>
+    <string name="InsertC">Insertar contenedor</string>
+    <string name="delCont">Eliminar contenedor</string>
+    <string name="updCont">Actualizar contenedor</string>
+    <string name="LstConrt">Listar contenedores</string>
+    <string name="msgSucces">Insertado con éxito</string>
+    <string name="msgDel">Eliminado con éxito</string>
+    <string name="msgUpd">Actualizado con éxito</string>
+    <string name="msgErr">Error: faltan datos</string>
+    <string name="btn_insert_Cont">Registrar contenedor</string>
 </resources>
