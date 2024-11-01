@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ExamenI"
         tools:targetApi="34">
         <activity
+            android:name=".vul_CustomList"
+            android:exported="false" />
+        <activity
             android:name=".vul_viewListActivity"
             android:exported="false" />
         <activity

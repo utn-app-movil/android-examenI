@@ -24,5 +24,6 @@ open class vul_Persona : Persona {
         this.flightDateTime = flightDateTime
     }
 
-
+    override val FullDescription: String
+        get() = "$Name $LastName"
 }

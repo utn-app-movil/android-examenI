@@ -5,10 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vul_viewListActivity">
+    tools:context=".vul_CustomList">
 
     <ListView
-        android:id="@+id/vul_lstPersonsList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:id="@+id/vul_CustomPersonList"
+        android:layout_width="418dp"
+        android:layout_height="702dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="-7dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

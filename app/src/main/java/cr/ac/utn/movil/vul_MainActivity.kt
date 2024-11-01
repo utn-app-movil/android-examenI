@@ -35,6 +35,11 @@ class vul_MainActivity : AppCompatActivity() {
             util.openActivity(this, vul_viewListActivity::class.java)
         })
 
+        val vul_btnViewCustomList = findViewById<Button>(R.id.vul_btnViewCustomList)
+        vul_btnViewCustomList.setOnClickListener(View.OnClickListener {
+            util.openActivity(this, vul_CustomList::class.java)
+        })
+
         val vul_btnCloseDialog = findViewById<Button>(R.id.vul_btnCloseDialog)
         vul_btnCloseDialog.setOnClickListener(View.OnClickListener {
             DisplayDialog()

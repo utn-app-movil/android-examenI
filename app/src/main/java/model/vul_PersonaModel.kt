@@ -5,10 +5,10 @@ import cr.ac.utn.appmovil.identities.Persona
 import cr.ac.utn.appmovil.identities.vul_Persona
 import cr.ac.utn.appmovil.interfaces.IDBManager
 import cr.ac.utn.movil.R
-import identities.Identifier
 
 open class vul_PersonaModel(private val context: Context) {
     private val dbManager: IDBManager = MemoryManager
+    private lateinit var _context: Context
 
     fun addContact(person: vul_Persona){
         dbManager.add(person)
@@ -32,12 +32,19 @@ open class vul_PersonaModel(private val context: Context) {
         return vul_Persona()
     }
 
-    fun getContactbyName(fullName: String): vul_Persona {
-        return vul_Persona()
+    fun getContactByFullName (fullName: String): vul_Persona {
+        var result = dbManager.getByFullDescription(fullName)
+        if(result == null){
+            val message = _context.getString(R.string.vul_NotFound)
+            throw Exception(message)
+        }else{
+            return vul_Persona()
+        }
     }
 
     fun getContactNames(): List<String> {
         val names = mutableListOf<String>()
+        dbManager.getAll().forEach{i-> names.add(i.FullDescription)}
         return names.toList()
     }
 }

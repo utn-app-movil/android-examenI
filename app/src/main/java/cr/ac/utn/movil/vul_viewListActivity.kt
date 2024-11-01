@@ -24,18 +24,15 @@ class vul_viewListActivity : AppCompatActivity() {
         }
 
         val personModel = vul_PersonaModel(this)
-        val lstContact = findViewById<ListView>(R.id.lstPersonsList)
-        val adapter = ArrayAdapter(this,
-            android.R.layout.simple_list_item_1,
-            personModel.getContactNames())
+        val lstContact = findViewById<ListView>(R.id.vul_lstPersonsList)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, personModel.getContactNames())
 
         lstContact.adapter = adapter
 
         lstContact.onItemClickListener = AdapterView.OnItemClickListener{
                 parent, view, position, id ->
             val itemValue = lstContact.getItemAtPosition(position) as String
-            util.openActivity(this, vul_AddPersonActivity::class.java
-                , EXTRA_MESSAGE_ID, itemValue)
+            util.openActivity(this, vul_AddPersonActivity::class.java, EXTRA_MESSAGE_ID, itemValue)
         }
     }
 }

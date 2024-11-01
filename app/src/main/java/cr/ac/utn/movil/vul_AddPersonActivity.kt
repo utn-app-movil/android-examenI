@@ -1,6 +1,7 @@
 package cr.ac.utn.movil
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
@@ -106,20 +107,24 @@ class vul_AddPersonActivity : AppCompatActivity() {
             persona.flightDateTime = txtFlightDate.text.toString()
 
             if (dataValidation(persona)) {
-                if (isEditionMode && personaModel.getContactbyName(persona.Name) != null) {
+                if (isEditionMode && personaModel.getContact(persona.Id) != null) {
                     showWarning(getString(R.string.vul_ContactExists))
                     return
                 }
 
                 if (!isEditionMode) {
                     personaModel.addContact(persona)
+                    val intentAddPersontoHome = Intent(this, vul_MainActivity::class.java)
+                    startActivity(intentAddPersontoHome)
                 } else {
                     personaModel.updateContact(persona)
+                    val intentAddPersontoHome = Intent(this, vul_MainActivity::class.java)
+                    startActivity(intentAddPersontoHome)
                 }
                 cleanScreen()
-                showWarning(R.string.vul_Succesfully.toString())
+                showWarning(getString(R.string.vul_Succesfully))
             } else {
-                showWarning(R.string.vul_Wrong.toString())
+                showWarning(getString(R.string.vul_Wrong))
             }
 
         } catch (e: Exception) {
@@ -191,6 +196,7 @@ class vul_AddPersonActivity : AppCompatActivity() {
     }
 
     private fun deleteContact() {
+
         showWarning(R.string.vul_Succesfully.toString())
     }
 
@@ -210,31 +216,28 @@ class vul_AddPersonActivity : AppCompatActivity() {
         invalidateOptionsMenu()
     }
 
-    private fun loadContact(personInfo: String) {
-        try {
-            val person = personaModel.getContact(personInfo)
-            if (person != null) {
-                txtId.setText(person.Id)
-                txtName.setText(person.Name)
-                txtLastName.setText(person.LastName)
-                txtPhone.setText(person.Phone.toString())
-                txtEmail.setText(person.Email)
-                txtAddress.setText(person.Address)
-                txtOriginCountry.setText(person.Country)
-                txtDestinationCountry.setText(person.countryDestination)
-                txtFlightNumber.setText(person.flightNumber)
-                txtFlightDate.setText(person.flightDateTime)
-                isEditionMode = true
-                txtId.isEnabled = false
-            } else {
-                showWarning(R.string.vul_NotFound.toString())
-            }
-        } catch (e: Exception) {
-            showWarning("Error: ${e.message}")
+    private fun loadContact(contactInfo: String){
+        try{
+            val person = personaModel.getContact(contactInfo)
+            txtId.setText(person.Id)
+            txtName.setText(person.Name)
+            txtLastName.setText(person.LastName)
+            txtPhone.setText(person.Phone.toString())
+            txtEmail.setText(person.Email)
+            txtAddress.setText(person.Address)
+            txtOriginCountry.setText(person.Country)
+            txtDestinationCountry.setText(person.countryDestination)
+            txtFlightNumber.setText(person.flightNumber)
+            txtFlightDate.setText(person.flightDateTime)
+            isEditionMode = true
+            txtId.isEnabled = false
+        }catch (e: Exception){
+            Toast.makeText(this, e.message.toString(), Toast.LENGTH_LONG).show()
         }
     }
 
     private fun showWarning(message: String) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
+
 }
