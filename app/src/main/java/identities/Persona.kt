@@ -2,7 +2,7 @@ package cr.ac.utn.appmovil.identities
 
 import identities.Identifier
 
-class Persona: Identifier {
+    open class Persona: Identifier {
     private var _name: String =""
     private var _lastName: String=""
     private var _phone: Int = 0
