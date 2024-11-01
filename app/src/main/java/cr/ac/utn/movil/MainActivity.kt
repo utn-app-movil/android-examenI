@@ -17,4 +17,7 @@ class MainActivity : AppCompatActivity() {
             insets
         }
     }
+    btnOpenInventory.setOnClickListener {
+        startActivity(Intent(this, inv_InventoryActivity::class.java))
+    }
 }
