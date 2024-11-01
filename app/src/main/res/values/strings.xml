@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Test 1</string>
     <string name="far_farm_title_name">Pharmacy</string>
     <string name="far_patient_txt">Patient</string>
@@ -17,4 +18,39 @@
     <string name="far_Ins_new_Patient">Insert patient</string>
     <string name="far_success_addMedicine">Medicine added</string>
     <string name="far_txt_failed">Something wrong</string>
+    <string name="app_name">Containers Dorian</string>
+    <string name="nav_ContainerCont">Container Control</string>
+    <string name="nav_ListCont">List Containers</string>
+    <string name="nav_containerNum">Container number</string>
+    <string name="nav_nomPer">Person name</string>
+    <string name="day">dd/mm/yyyy</string>
+    <string name="nav_dayTxt">Day control</string>
+    <string name="nav_hour">Hour maintenance</string>
+    <string name="nav_typeCont">Container Type</string>
+    <string name="nav_tempCont">Container temperatue</string>
+    <string name="nav_weight">Contaier weight</string>
+    <string name="nav_Product">Product in the container</string>
+
+    //sppiner
+    <string-array name="datos">
+        <item>Seco</item>
+        <item>Humedo</item>
+
+    </string-array>
+    //Crud
+
+    <string name="containerNotF">Container not found</string>
+    <string name="InsertC">Insert Container</string>
+    <string name="delCont">Delete container</string>
+    <string name="updCont">Update Container</string>
+    <string name="LstConrt">List Containers</string>
+    <string name="msgSucces">Succes insert</string>
+    <string name="msgDel">Succes delete</string>
+    <string name="msgUpd">Succes update</string>
+    <string name="msgErr">Error missing data</string>
+    <string name="btn_insert_Cont">Regis container</string>
+
+    //succes msg
+
+
 </resources>
