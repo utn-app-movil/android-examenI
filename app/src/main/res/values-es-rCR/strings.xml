@@ -1,31 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Examen I</string>
-    <string name="tcam_PersonName">Nombre completo</string>
-    <string name="tcam_DateTime">Fecha y hora</string>
-    <string name="tcam_ValueChange">Valor de tipo de cambio</string>
-    <string name="tcam_AmountChange">Monto a Cambiar</string>
-    <string name="tcam_CalculateAmount">Calcular monto a pagar</string>
-    <string name="tcam_AmountPay">Monto a pagar:</string>
-    <string name="tcam_addChange">Agregar tipo de cambio</string>
-    <string name="tcam_ViewChanges">Ver tipos de cambio</string>
-    <string name="tcam_Menu_Save">Guardar</string>
-    <string name="tcam_Menu_Delete">Eliminar</string>
-    <string name="tcam_Menu_Cancel">Cancelar</string>
-    <string name="ema_btnaddemail">Agregar Correo</string>
-    <string name="ema_btnviewemail">"Ver lista de correos "</string>
-    <string name="mnusave">Guardar</string>
-    <string name="mnuremove">Remover</string>
-    <string name="mnucancel">Cancelar</string>
-    <string name="EmailContactId">"Emisor "</string>
-    <string name="EmailMessage">Mensaje</string>
-    <string name="EmailSendDate">Fecha</string>
-    <string name="EmailCC">CC</string>
-    <string name="EmailBCC">CCO</string>
-    <string name="buttonSave">Guardar</string>
-    <string name="msgSave">"Informacion Guardada Correctamente "</string>
-    <string name="msgMissingData">"Datos no encontrados "</string>
-    <string name="msgDelete">"Eliminado "</string>
-    <string name="msgEmailIdMissing">...</string>
-    <string name="EmailTitle">Titulo del Mensaje</string>
+
+    //main
+    <string name="nav_ContainerCont">Control de contenedores</string>
+    <string name="nav_ListCont">Listar contenedores</string>
+
+    //Container
+    <string name="nav_containerNum">Número de contenedor</string>
+    <string name="nav_nomPer">Nombre del encargado</string>
+    <string name="day">dd/mm/yyyy</string>
+    <string name="nav_dayTxt">Dia del control</string>
+    <string name="nav_hour">hora de mantenimineto</string>
+    <string name="nav_typeCont">Tipo de contenedor</string>
+    <string name="nav_tempCont">Temperatura del contenedor</string>
+    <string name="nav_weight">Peso de contenedor</string>
+    <string name="nav_Product">Producto en el contenedor</string>
+    <string name="containerNotF">Contenedor no encontrado</string>
+    <string name="InsertC">Insertar contenedor</string>
+    <string name="delCont">Eliminar contenedor</string>
+    <string name="updCont">Actualizar contenedor</string>
+    <string name="LstConrt">Listar contenedores</string>
+    <string name="msgSucces">Insertado</string>
+    <string name="msgDel">Eliminado</string>
+    <string name="msgUpd">Actualizado</string>
+    <string name="msgErr">Faltan datos</string>
+    <string name="btn_insert_Cont">Registrar contenedor</string>
+
 </resources>

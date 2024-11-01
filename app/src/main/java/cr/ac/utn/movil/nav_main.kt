@@ -6,16 +6,20 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import cr.ac.utn.appmovil.util.util
 
-class tcam_Custom_List_Activity : AppCompatActivity() {
 
+class nav_main : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_tcam_custom_list)
+        setContentView(R.layout.activity_nav_main)
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -23,21 +27,24 @@ class tcam_Custom_List_Activity : AppCompatActivity() {
         }
     }
 
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.tcam_main_menu, menu)
+        inflater.inflate(R.menu.nav_main_menu, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.menu_contact -> {
-                util.openActivity(this, tcam_MainActivity::class.java, "", "")
+            R.id.nav_mainControl -> {
+               util.openActivity(this, nav_Control_Container::class.java, "Control of container", "Container")
+                //util.openActivity(this, nav_Control_Container::class.java)
                 return true
             }
 
-            R.id.menu_viewContactList -> {
-                util.openActivity(this, tcam_Custom_List_Activity::class.java, "", "")
+            R.id.nav_mainList -> {
+                util.openActivity(this, nav_contList::class.java, "Control of container", "Container")
+
                 return true
             }
 
