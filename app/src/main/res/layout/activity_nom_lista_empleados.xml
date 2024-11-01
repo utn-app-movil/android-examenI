@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Lista_Empleados">
+
+    <TextView
+        android:id="@+id/Lista_Empleados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lista De Empleados"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="351dp"
+        tools:layout_editor_absoluteY="669dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="378dp"
+        android:layout_height="568dp"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
