@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamenI"
         tools:targetApi="34">
-
         <activity
             android:name=".nav_contList"
             android:exported="false" />
@@ -56,10 +55,6 @@
             android:name=".far_MainActivity"
             android:exported="true" >
         </activity>
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
