@@ -1,4 +1,5 @@
 package cr.ac.utn.appmovil.model
+
 import cr.ac.utn.appmovil.data.MemoryManager
 import cr.ac.utn.appmovil.identities.Persona
 import cr.ac.utn.appmovil.interfaces.IDBManager

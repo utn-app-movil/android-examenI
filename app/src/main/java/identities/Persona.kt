@@ -10,7 +10,6 @@ open class Persona: Identifier {
     private var _address: String=""
     private var _country: String=""
 
-
     constructor()
 
     constructor(id: String, name: String, lastName: String, phone: Int, email: String, address: String, country: String){
