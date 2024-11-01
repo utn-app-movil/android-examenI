@@ -6,20 +6,46 @@
     <string name="hora_de_renovacion">Hora de Renovacion</string>
     <string name="puntaje_actual">Puntaje Actual</string>
     <string name="acceder">Acceder</string>
-    
-    <!-- Título principal -->
-    <string name="app_name">Contribution Dashboard</string>
-    <string name="main_title">Contribution Dashboard</string>
 
-    <!-- Pistas para los campos de entrada -->
-    <string name="hint_person_name">Person name</string>
-    <string name="hint_total_contributions">Total of contributions</string>
-    <string name="hint_day">Day</string>
-    <string name="hint_month">Month</string>
-    <string name="hint_year">Year</string>
 
-    <!-- Texto de los botones -->
-    <string name="save_contribution">Save Contribution</string>
-    <string name="view_dashboard">View Dashboard</string>
-    <string name="update_contribution">con_update_contribution\n</string>
+    <!-- Activity RecRegisterActivity Texts -->
+    <string name="rec_hint_name">Nombre completo</string>
+    <string name="rec_hint_last_name">Apellido</string>
+    <string name="rec_hint_phone">Teléfono</string>
+    <string name="rec_hint_email">Correo electrónico</string>
+    <string name="rec_hint_address">Dirección</string>
+    <string name="rec_hint_country">País</string>
+    <string name="rec_hint_province">Provincia</string>
+    <string name="rec_hint_canton">Cantón</string>
+    <string name="rec_hint_district">Distrito</string>
+    <string name="rec_hint_salary">Pretensión salarial</string>
+    <string name="rec_hint_experience">Años de experiencia</string>
+    <string name="rec_role_prompt">Rol de interés</string>
+    <string name="rec_button_save">Guardar</string>
+
+    <!-- Roles for Spinner -->
+    <string name="rec_role_software">Software</string>
+    <string name="rec_role_infrastructure">Infraestructura</string>
+    <string name="rec_role_networks">Redes</string>
+    <string name="rec_role_security">Seguridad</string>
+    <string name="rec_role_qa">QA</string>
+
+    <!-- Toast Messages -->
+    <string name="rec_data_saved">Datos guardados correctamente</string>
+    <string name="rec_fill_all_fields">Por favor complete todos los campos</string>
+
+    <!-- RecMainActivity Texts -->
+    <string name="rec_button_register">Registrar Datos</string>
+    <string name="rec_button_list">Ver Lista de Registros</string>
+
+    <!-- RecListActivity Texts -->
+    <string name="rec_list_title">Lista de Registros</string>
+    <string name="rec_no_records">No hay registros disponibles</string>
+
+    <!-- RecDetailActivity Texts -->
+    <string name="rec_detail_name">Nombre:</string>
+    <string name="rec_detail_phone">Teléfono:</string>
+    <string name="rec_detail_email">Correo:</string>
+    <string name="rec_detail_address">Dirección:</string>
+    <string name="rec_detail_country">País:</string>
 </resources>

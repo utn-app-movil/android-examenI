@@ -3,18 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="16dp">
 
     <Button
-        android:id="@+id/btnCrud"
-        android:layout_width="wrap_content"
+        android:id="@+id/rec_button_register"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CRUD" />
+        android:text="@string/rec_button_register" />
 
     <Button
-        android:id="@+id/btnCustomList"
-        android:layout_width="wrap_content"
+        android:id="@+id/rec_button_list"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lista Personalizada" />
+        android:text="@string/rec_button_list" />
 </LinearLayout>
+
