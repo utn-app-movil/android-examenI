@@ -1,5 +1,24 @@
 <resources>
     <string name="app_name">Test 1</string>
+
+    //tcam_ Expresiones
+    <string name="tcam_PersonName">Full name</string>
+    <string name="tcam_DateTime">Date and Time</string>
+    <string name="tcam_ValueChange">exchange rate value</string>
+    <string name="tcam_CalculateAmount">Calculate amount to pay</string>
+    <string name="tcam_AmountPay">Amount to pay:</string>
+    <string name="tcam_AmountChange">Amount to change</string>
+    <string name="tcam_addChange">Add Type change</string>
+    <string name="tcam_ViewChanges">View Types of changes</string>
+    <string name="tcam_Menu_Save">Save</string>
+    <string name="tcam_Menu_Delete">Delete</string>
+    <string name="tcam_Menu_Cancel">Cancel</string>
+
+
+    <string-array name="exchange_type_array">
+        <item>Dollars to colones</item>
+        <item>Colones to Dollars</item>
+    </string-array>
     <string name="ema_btnaddemail">Add Email</string>
     <string name="ema_btnviewemail">View List Email</string>
 

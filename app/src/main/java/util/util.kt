@@ -10,6 +10,9 @@ class util {
     companion object  {
         fun openActivity(context: Context, objclass: Class<*>, extraName: String="", value: String=""){
             val intent = Intent(context, objclass).apply { putExtra(extraName, value)}
+        fun openActivity(context: Context, objclass: Class<*>, extraName: String, value: String?) {
+            val intent = Intent(context, objclass).apply { putExtra(extraName, value) }
+
             startActivity(context, intent, null)
         }
     }
