@@ -1,6 +1,44 @@
 <resources>
 
     <string name="app_name">Test 1</string>
+    <string name="vul_NotFound">Data not found</string>
+    <string name="vul_addPerson">Add Person</string>
+    <string name="vul_viewList">View List</string>
+    <string name="vul_ID">id</string>
+    <string name="vul_PersonName">Name</string>
+    <string name="vul_PersonLasName">Last Name</string>
+    <string name="vul_PersonPhone">Phone</string>
+    <string name="vul_PersonEmail">Email</string>
+    <string name="vul_PersonAddress">Address</string>
+    <string name="vul_PersonCountry">Origin Country</string>
+    <string name="vul_PersonDestinationCountry">Destination Country</string>
+    <string name="vul_PersonFlightNumber">Flight Number</string>
+    <string name="vul_PersonFlightDate">Flight Date</string>
+    <string name="vul_Save">Save</string>
+    <string name="vul_Delete">Delete</string>
+    <string name="vul_Cancel">Cancelar</string>
+    <string name="vul_CloseDialogTitle">Close App</string>
+    <string name="vul_Yes">Yes</string>
+    <string name="vul_No">No</string>
+    <string name="vul_CloseDialog">Close App?</string>
+    <string name="vul_Succesfully">Succesfully</string>
+    <string name="vul_Wrong">Wrong</string>
+    <string name="vul_WarningID">ID is required</string>
+    <string name="vul_WarningName">Name is required</string>
+    <string name="vul_WarningLastName">Last name is required</string>
+    <string name="vul_WarningPhone">Phone is required</string>
+    <string name="vul_WarningEmail">Email is required</string>
+    <string name="vul_WarningAddress">Address is required</string>
+    <string name="vul_WarningCountry">Origin Country is required</string>
+    <string name="vul_WarningCountryDestination">Country destination is requiered</string>
+    <string name="vul_WarningFlightNumber">Flight number is requiered</string>
+    <string name="vul_WarningFlightDate">Flight date is requiered</string>
+    <string name="vul_WarningPhoneNumber">Phone number is not valid</string>
+    <string name="vul_WarningDateFormat">Date format is not valid use DD/MM/YYYY</string>
+    <string name="vul_ASKDelete">Delete contact?</string>
+    <string name="vul_ASKConfirmation">Continue</string>
+    <string name="vul_ContactExists">Contact already exists</string>
+    <string name="vul_CustomView">View Custom List</string>
     <string name="far_farm_title_name">Pharmacy</string>
     <string name="far_patient_txt">Patient</string>
     <string name="far_medicine_txt">Medicine</string>
@@ -51,6 +89,4 @@
     <string name="btn_insert_Cont">Regis container</string>
 
     //succes msg
-
-
 </resources>
