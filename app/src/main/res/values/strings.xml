@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Test 1</string>
+    <string name="cap_AddTraining">Add Training</string>
+    <string name="cap_ListTraining">List Training</string>
 </resources>

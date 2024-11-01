@@ -13,6 +13,15 @@
         android:theme="@style/Theme.ExamenI"
         tools:targetApi="34">
         <activity
+            android:name=".cap_ListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cap_AddActivity"
+            android:exported="false" />
+        <!--<activity
+            android:name=".cap_MainActivity"
+            android:exported="false" /> -->
+        <activity
             android:name=".cen_MainActivity"
             android:exported="false" />
         <activity
@@ -28,7 +37,7 @@
             android:name=".cit_MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".cap_MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
