@@ -13,6 +13,15 @@
         android:theme="@style/Theme.ExamenI"
         tools:targetApi="34">
         <activity
+            android:name=".far_adding_patient"
+            android:exported="false" />
+        <activity
+            android:name=".far_activity_add"
+            android:exported="false" />
+        <activity
+            android:name=".far_MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".cen_MainActivity"
             android:exported="false" />
         <activity
