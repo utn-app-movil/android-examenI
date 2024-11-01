@@ -24,14 +24,14 @@ class cap_ListActivity : AppCompatActivity() {
         }
         var trainingModel = cap_TrainingModel(this)
         val lstCustomList = findViewById<ListView>(R.id.Cap_lstCustomList)
-        var trainingList = trainingModel.getCapacitaciones()
+        var trainingList = trainingModel.getTraining()
 
         val adapter = cap_CapListAdapter (this, R.layout.cap_training_item_list, trainingList)
         lstCustomList.adapter = adapter
 
         lstCustomList.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
-            val capacitacionId = trainingList[position].Id
-            util.openActivity(this, cap_AddActivity::class.java, EXTRA_MESSAGE_ID, capacitacionId)
+            val trainingId = trainingList[position].Id
+            util.openActivity(this, cap_AddActivity::class.java, EXTRA_MESSAGE_ID, trainingId)
         }
     }
 }

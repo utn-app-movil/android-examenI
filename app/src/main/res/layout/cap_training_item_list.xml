@@ -44,7 +44,7 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/cap_lbItemDateTime"
+                android:id="@+id/cap_lbItemDate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="TextView"

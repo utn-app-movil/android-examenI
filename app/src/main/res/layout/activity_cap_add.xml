@@ -167,12 +167,12 @@
         <TableRow>
 
             <TextView
-                android:id="@+id/cap_txtDateTimeLabel"
+                android:id="@+id/cap_txtDateLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cap_TrainingDate" />
             <EditText
-                android:id="@+id/cap_txtDateTime"
+                android:id="@+id/cap_txtDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="datetime" />

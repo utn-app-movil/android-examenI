@@ -27,9 +27,9 @@ class cap_AddActivity : AppCompatActivity() {
     private lateinit var txtCourseCode: EditText
     private lateinit var txtDescription: EditText
     private lateinit var txtHours: EditText
-    private lateinit var txtDateTime: EditText
+    private lateinit var txtDate: EditText
 
-    private lateinit var capacitacionModel: cap_TrainingModel
+    private lateinit var trainingModel: cap_TrainingModel
     private var isEditionMode: Boolean = false
     private lateinit var menuItemDelete: MenuItem
 
@@ -54,13 +54,13 @@ class cap_AddActivity : AppCompatActivity() {
         txtCourseCode = findViewById(R.id.cap_txtCourseCode)
         txtDescription = findViewById(R.id.cap_txtDescription)
         txtHours = findViewById(R.id.cap_txtHours)
-        txtDateTime = findViewById(R.id.cap_txtDateTime)
+        txtDate = findViewById(R.id.cap_txtDate)
 
-        capacitacionModel = cap_TrainingModel(this)
+        trainingModel = cap_TrainingModel(this)
 
         // Verifica si se está en modo edición
-        val capacitacionId = intent.getStringExtra(EXTRA_MESSAGE_ID)
-        if (capacitacionId != null && capacitacionId.isNotEmpty()) loadCapacitacion(capacitacionId)
+        val trainingId = intent.getStringExtra(EXTRA_MESSAGE_ID)
+        if (trainingId != null && trainingId.isNotEmpty()) loadTraining(trainingId)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -74,11 +74,11 @@ class cap_AddActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.cap_mnu_save -> {
-                saveCapacitacion()
+                savetraning()
                 true
             }
             R.id.cap_mnu_delete -> {
-                deleteCapacitacion()
+                deleteTraining()
                 true
             }
             R.id.cap_mnu_cancel -> {
@@ -89,9 +89,9 @@ class cap_AddActivity : AppCompatActivity() {
         }
     }
 
-    private fun saveCapacitacion() {
+    private fun savetraning() {
         try {
-            val capacitacion = cap_Training(
+            val training = cap_Training(
                 id = txtId.text.toString(),
                 _name = txtName.text.toString(),
                 _lastName = txtLastName.text.toString(),
@@ -102,14 +102,14 @@ class cap_AddActivity : AppCompatActivity() {
                 _courseCode = txtCourseCode.text.toString(),
                 _description = txtDescription.text.toString(),
                 _hours = txtHours.text.toString().toIntOrNull() ?: 0,
-                _dateTime = txtDateTime.text.toString()
+                _dateTime = txtDate.text.toString()
             )
 
-            if (dataValidation(capacitacion)) {
+            if (dataValidation(training)) {
                 if (!isEditionMode)
-                    capacitacionModel.addCapacitacion(capacitacion)
+                    trainingModel.addTraining(training)
                 else
-                    capacitacionModel.updateCapacitacion(capacitacion)
+                    trainingModel.updateTraining(training)
 
                 cleanScreen()
                 Toast.makeText(this, R.string.cap_msgSave, Toast.LENGTH_LONG).show()
@@ -121,22 +121,22 @@ class cap_AddActivity : AppCompatActivity() {
         }
     }
 
-    private fun dataValidation(capacitacion: cap_Training): Boolean {
-        return capacitacion.Id.isNotEmpty() &&
-                capacitacion.name.isNotEmpty() &&
-                capacitacion.lastName.isNotEmpty() &&
-                capacitacion.phone > 0 &&
-                capacitacion.address.isNotEmpty() &&
-                capacitacion.email.isNotEmpty() &&
-                capacitacion.country.isNotEmpty() &&
-                capacitacion.courseCode.isNotEmpty() &&
-                capacitacion.description.isNotEmpty() &&
-                capacitacion.hours > 0 &&
-                capacitacion.dateTime.isNotEmpty()
+    private fun dataValidation(training: cap_Training): Boolean {
+        return training.Id.isNotEmpty() &&
+                training.name.isNotEmpty() &&
+                training.lastName.isNotEmpty() &&
+                training.phone > 0 &&
+                training.address.isNotEmpty() &&
+                training.email.isNotEmpty() &&
+                training.country.isNotEmpty() &&
+                training.courseCode.isNotEmpty() &&
+                training.description.isNotEmpty() &&
+                training.hours > 0 &&
+                training.dateTime.isNotEmpty()
     }
 
-    private fun deleteCapacitacion() {
-        capacitacionModel.removeCapacitacion(txtId.text.toString())
+    private fun deleteTraining() {
+        trainingModel.removeTraining(txtId.text.toString())
         Toast.makeText(this, R.string.cap_msgDelete, Toast.LENGTH_LONG).show()
         cleanScreen()
     }
@@ -152,26 +152,26 @@ class cap_AddActivity : AppCompatActivity() {
         txtCourseCode.setText("")
         txtDescription.setText("")
         txtHours.setText("")
-        txtDateTime.setText("")
+        txtDate.setText("")
         txtId.isEnabled = true
         isEditionMode = false
         invalidateOptionsMenu()
     }
 
-    private fun loadCapacitacion(id: String) {
+    private fun loadTraining(id: String) {
         try {
-            val capacitacion = capacitacionModel.getCapacitacion(id) as cap_Training
-            txtId.setText(capacitacion.Id)
-            txtName.setText(capacitacion.name)
-            txtLastName.setText(capacitacion.lastName)
-            txtPhone.setText(capacitacion.phone.toString())
-            txtEmail.setText(capacitacion.email)
-            txtAddress.setText(capacitacion.address)
-            txtCountry.setText(capacitacion.country)
-            txtCourseCode.setText(capacitacion.courseCode)
-            txtDescription.setText(capacitacion.description)
-            txtHours.setText(capacitacion.hours.toString())
-            txtDateTime.setText(capacitacion.dateTime)
+            val training = trainingModel.getTraining(id) as cap_Training
+            txtId.setText(training.Id)
+            txtName.setText(training.name)
+            txtLastName.setText(training.lastName)
+            txtPhone.setText(training.phone.toString())
+            txtEmail.setText(training.email)
+            txtAddress.setText(training.address)
+            txtCountry.setText(training.country)
+            txtCourseCode.setText(training.courseCode)
+            txtDescription.setText(training.description)
+            txtHours.setText(training.hours.toString())
+            txtDate.setText(training.dateTime)
             isEditionMode = true
             txtId.isEnabled = false
         } catch (e: Exception) {

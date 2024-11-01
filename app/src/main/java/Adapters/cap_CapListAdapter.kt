@@ -23,7 +23,7 @@ class cap_CapListAdapter(
         // Obtén las referencias de los TextViews en el layout
         val lbFullName = rowView.findViewById<TextView>(R.id.cap_lbItemFullName)
         val lbCourseCode = rowView.findViewById<TextView>(R.id.cap_lbItemCourseCode)
-        val lbDateTime = rowView.findViewById<TextView>(R.id.cap_lbItemDateTime)
+        val lbDateTime = rowView.findViewById<TextView>(R.id.cap_lbItemDate)
 
         // Obtiene el objeto `cap_Capacitacion` en la posición actual
         val capacitacion = datasource[position]
