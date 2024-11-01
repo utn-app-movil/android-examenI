@@ -1,6 +1,30 @@
 <resources>
+    <!-- App Names (combining both) -->
+    <string name="app_name">Examen I</string>
+    
+    <!-- Strings de Bairon-Examen1 -->
+    <string name="cap_AddTraining">Add Training</string>
+    <string name="cap_ListTraining">List Training</string>
+    <string name="cap_mnu_save">Save</string>
+    <string name="cap_mnu_delete">Delete</string>
+    <string name="cap_mnu_cancel">Cancel</string>
+    <string name="cap_msgTrainingNotFound">Training Not Found</string>
+    <string name="cap_msgSave">Saved successfully.</string>
+    <string name="cap_msgMissingData">Missing data please check.</string>
+    <string name="cap_msgDelete">Delete successfully.</string>
+    <string name="cap_TrainingID">ID</string>
+    <string name="cap_TrainingName">Name</string>
+    <string name="cap_LastName">Last Name</string>
+    <string name="cap_TrainingPhone">Phone</string>
+    <string name="cap_TrainingEmail">Email</string>
+    <string name="cap_TrainingAddress">Address</string>
+    <string name="cap_TrainingCountry">Country</string>
+    <string name="cap_TrainingCourseCode">Course Code</string>
+    <string name="cap_TrainingDescription">Description</string>
+    <string name="cap_TrainingHours">Hours</string>
+    <string name="cap_TrainingDate">Date</string>
 
-    <string name="app_name">Test 1</string>
+    <!-- Strings de Pharmacy (main) -->
     <string name="far_farm_title_name">Pharmacy</string>
     <string name="far_patient_txt">Patient</string>
     <string name="far_medicine_txt">Medicine</string>
@@ -18,7 +42,8 @@
     <string name="far_Ins_new_Patient">Insert patient</string>
     <string name="far_success_addMedicine">Medicine added</string>
     <string name="far_txt_failed">Something wrong</string>
-    <string name="app_name">Containers Dorian</string>
+
+    <!-- Strings de Containers (main) -->
     <string name="nav_ContainerCont">Container Control</string>
     <string name="nav_ListCont">List Containers</string>
     <string name="nav_containerNum">Container number</string>
@@ -27,30 +52,25 @@
     <string name="nav_dayTxt">Day control</string>
     <string name="nav_hour">Hour maintenance</string>
     <string name="nav_typeCont">Container Type</string>
-    <string name="nav_tempCont">Container temperatue</string>
-    <string name="nav_weight">Contaier weight</string>
+    <string name="nav_tempCont">Container temperature</string>
+    <string name="nav_weight">Container weight</string>
     <string name="nav_Product">Product in the container</string>
 
-    //sppiner
+    <!-- Spinner Data for Container -->
     <string-array name="datos">
         <item>Seco</item>
         <item>Humedo</item>
-
     </string-array>
-    //Crud
 
+    <!-- CRUD Messages -->
     <string name="containerNotF">Container not found</string>
     <string name="InsertC">Insert Container</string>
     <string name="delCont">Delete container</string>
     <string name="updCont">Update Container</string>
     <string name="LstConrt">List Containers</string>
-    <string name="msgSucces">Succes insert</string>
-    <string name="msgDel">Succes delete</string>
-    <string name="msgUpd">Succes update</string>
+    <string name="msgSucces">Success insert</string>
+    <string name="msgDel">Success delete</string>
+    <string name="msgUpd">Success update</string>
     <string name="msgErr">Error missing data</string>
-    <string name="btn_insert_Cont">Regis container</string>
-
-    //succes msg
-
-
+    <string name="btn_insert_Cont">Register container</string>
 </resources>

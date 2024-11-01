@@ -12,6 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExamenI"
         tools:targetApi="34">
+
+        <!-- Actividades de Bairon-Examen1 -->
+        <activity
+            android:name=".cap_ListActivity"
+            android:exported="false"
+            android:parentActivityName=".cap_MainActivity"/>
+        <activity
+            android:name=".cap_AddActivity"
+            android:exported="false"
+            android:parentActivityName=".cap_MainActivity"/>
+        <activity
+            android:name=".cap_MainActivity"
+            android:exported="false" />
+
+        <!-- Actividades de main -->
         <activity
             android:name=".nav_contList"
             android:exported="false" />
@@ -26,10 +41,11 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Actividades Comunes -->
         <activity
             android:name=".cen_MainActivity"
             android:exported="false" />
@@ -47,7 +63,14 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Actividades adicionales de main -->
         <activity
             android:name=".far_adding_patient"
             android:exported="false" />
@@ -56,4 +79,5 @@
             android:exported="true" >
         </activity>
     </application>
+
 </manifest>
