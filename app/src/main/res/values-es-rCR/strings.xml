@@ -26,4 +26,48 @@
     <string name="Cen_much_text">Mucho texto</string>
     <string name="Cen_not_email">Email no aceptado</string>
     <string name="Cen_much_number">El numero debe ser de 8</string>
+    <string name="far_farm_title_name">Farmacia</string>
+    <string name="far_patient_txt">Paciente</string>
+    <string name="far_medicine_txt">Medicamento</string>
+    <string name="far_quantity_input">Cantidad</string>
+    <string name="far_Add_button">Agregar medicina</string>
+    <string name="far_price_Input">Precio</string>
+    <string name="far_medicine_Input">Nombre de la medicina</string>
+    <string name="far_name_input">Nombre</string>
+    <string name="far_id_input">Identificacion</string>
+    <string name="far_input_lastname">Apellido</string>
+    <string name="far_input_phone">Numero de telefono</string>
+    <string name="far_email_input">Correo electronico</string>
+    <string name="far_address_input">Direccion</string>
+    <string name="far_country_input">Pais</string>
+    <string name="far_Ins_new_Patient">Nuevo paciente</string>
+    <string name="far_success_addMedicine">Medicina agregada</string>
+    <string name="far_txt_failed">Algo fallo</string>
+
+    //main
+    <string name="nav_ContainerCont">Control de contenedores</string>
+    <string name="nav_ListCont">Listar contenedores</string>
+
+    //Container
+    <string name="nav_containerNum">Número de contenedor</string>
+    <string name="nav_nomPer">Nombre del encargado</string>
+    <string name="day">dd/mm/yyyy</string>
+    <string name="nav_dayTxt">Dia del control</string>
+    <string name="nav_hour">hora de mantenimineto</string>
+    <string name="nav_typeCont">Tipo de contenedor</string>
+    <string name="nav_tempCont">Temperatura del contenedor</string>
+    <string name="nav_weight">Peso de contenedor</string>
+    <string name="nav_Product">Producto en el contenedor</string>
+    <string name="containerNotF">Contenedor no encontrado</string>
+    <string name="InsertC">Insertar contenedor</string>
+    <string name="delCont">Eliminar contenedor</string>
+    <string name="updCont">Actualizar contenedor</string>
+    <string name="LstConrt">Listar contenedores</string>
+    <string name="msgSucces">Insertado</string>
+    <string name="msgDel">Eliminado</string>
+    <string name="msgUpd">Actualizado</string>
+    <string name="msgErr">Faltan datos</string>
+    <string name="btn_insert_Cont">Registrar contenedor</string>
+
+
 </resources>
